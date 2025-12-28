@@ -1,0 +1,22 @@
+{% extends 'website/base.html' %}
+{% block content %}
+  {% include 'website/components/hero.html' %}
+  {% include 'website/components/problem_section.html' %}
+  {% include 'website/components/solution_section.html' %}
+
+  <section class="py-12">
+    <div class="container mx-auto lg:container">
+      <h2 class="text-2xl font-semibold">Como funciona</h2>
+      <ol class="mt-4 space-y-3 list-decimal list-inside">
+        <li>Diagnóstico rápido dos processos</li>
+        <li>Desenho de automações e fluxos</li>
+        <li>Implementação técnica</li>
+        <li>Acompanhamento contínuo</li>
+      </ol>
+      <div class="mt-6">
+        <a href="/contato/" class="btn btn-outline">Quero mapear meus gargalos</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

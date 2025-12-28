@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sum Connect — Consultoria em Automação, Dados e Sistemas</title>
+  <meta name="description" content="Reduza custos administrativos sem aumentar o time — Automação, dados e sistemas para empresas até 400 colaboradores.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/daisyui/dist/full.css" rel="stylesheet">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    /* desktop-first adjustments */
+    @media (max-width: 1024px) {
+      .lg\:container { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900 antialiased">
+  <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-40 shadow-sm">
+    <div class="container mx-auto lg:container flex items-center justify-between h-16">
+      <a href="/" class="font-semibold text-lg">Sum Connect</a>
+      <nav class="hidden md:flex gap-6">
+        <a href="/sobre/" class="text-slate-700">Sobre</a>
+        <a href="/solucoes/" class="text-slate-700">Soluções</a>
+        <a href="/como-trabalhamos/" class="text-slate-700">Como trabalhamos</a>
+        <a href="/contato/" class="btn btn-sm btn-primary">Solicitar diagnóstico gratuito</a>
+      </nav>
+      <div class="md:hidden">
+        <button x-data @click="$dispatch('toggle-menu')" class="btn btn-ghost">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="border-t bg-white mt-12">
+    <div class="container mx-auto lg:container py-12">
+      <div class="flex flex-col md:flex-row justify-between gap-6">
+        <div>
+          <h3 class="font-semibold">Sum Connect</h3>
+          <p class="text-sm text-slate-600 max-w-md">Consultoria em automação, dados e sistemas — redução de custo, eficiência operacional e decisões baseadas em dados.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Contato</h4>
+          <p class="text-sm text-slate-600">contato@sumconnect.com.br</p>
+        </div>
+      </div>
+      <div class="text-sm text-slate-500 mt-6">© Sum Connect — Todos os direitos reservados.</div>
+    </div>
+  </footer>
+</body>
+</html>

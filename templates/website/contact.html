@@ -1,0 +1,19 @@
+{% extends 'website/base.html' %}
+{% block content %}
+<section class="py-20">
+  <div class="container mx-auto lg:container max-w-2xl">
+    <h1 class="text-3xl font-bold">Descubra onde sua empresa está perdendo tempo e dinheiro</h1>
+    <form method="post" class="mt-6 space-y-4">
+      {% csrf_token %}
+      <input name="name" placeholder="Nome" class="input input-bordered w-full" required>
+      <input name="company" placeholder="Empresa" class="input input-bordered w-full">
+      <input name="role" placeholder="Cargo" class="input input-bordered w-full">
+      <input name="employees_count" placeholder="Nº de colaboradores" type="number" class="input input-bordered w-full">
+      <textarea name="main_challenge" placeholder="Principal desafio" class="textarea textarea-bordered w-full"></textarea>
+      <div>
+        <button type="submit" class="btn btn-primary">Agendar diagnóstico gratuito</button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
