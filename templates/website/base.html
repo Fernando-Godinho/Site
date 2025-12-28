@@ -5,24 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sum Connect — Consultoria em Automação, Dados e Sistemas</title>
   <meta name="description" content="Reduza custos administrativos sem aumentar o time — Automação, dados e sistemas para empresas até 400 colaboradores.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN with theme extension for palette and fonts -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sc-black': '#0F172A',
+            'sc-charcoal': '#1E293B',
+            'sc-bg': '#F8FAFC',
+            'sc-mid': '#CBD5E1',
+            'sc-accent': '#2563EB'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/daisyui/dist/full.css" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide/dist/lucide.min.js"></script>
+
+  <!-- Alpine.js for microinteractions and parallax control -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
   <style>
-    /* desktop-first adjustments */
+    :root{
+      --sc-black: #0F172A;
+      --sc-charcoal: #1E293B;
+      --sc-bg: #F8FAFC;
+      --sc-mid: #CBD5E1;
+      --sc-accent: #2563EB;
+      --container-max: 1100px;
+    }
+    html,body{font-family:Inter,ui-sans-serif,system-ui;color:rgba(15,23,42,0.95);background:var(--sc-bg)}
+    /* Desktop-first small helper */
     @media (max-width: 1024px) {
       .lg\:container { padding-left: 1rem; padding-right: 1rem; }
     }
+    /* Subtle focus outline for accessibility */
+    .focus-ring:focus{outline:2px solid var(--sc-accent);outline-offset:2px}
   </style>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('parallax', () => ({
+        y: 0,
+        speed: 0.06,
+        reduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 768,
+        init() {
+          if (this.reduced) return;
+          window.addEventListener('scroll', () => {
+            this.y = window.scrollY * this.speed;
+          });
+        }
+      }))
+    })
+  </script>
 </head>
-<body class="bg-gray-50 text-slate-900 antialiased">
+<body class="antialiased">
   <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-40 shadow-sm">
-    <div class="container mx-auto lg:container flex items-center justify-between h-16">
-      <a href="/" class="font-semibold text-lg">Sum Connect</a>
-      <nav class="hidden md:flex gap-6">
-        <a href="/sobre/" class="text-slate-700">Sobre</a>
-        <a href="/solucoes/" class="text-slate-700">Soluções</a>
-        <a href="/como-trabalhamos/" class="text-slate-700">Como trabalhamos</a>
+    <div class="mx-auto lg:container max-w-[var(--container-max)] flex items-center justify-between h-16 px-6">
+      <a href="/" class="font-semibold text-lg text-sc-black">Sum Connect</a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="/sobre/" class="text-slate-700 hover:text-sc-accent">Sobre</a>
+        <a href="/solucoes/" class="text-slate-700 hover:text-sc-accent">Soluções</a>
+        <a href="/como-trabalhamos/" class="text-slate-700 hover:text-sc-accent">Como trabalhamos</a>
         <a href="/contato/" class="btn btn-sm btn-primary">Solicitar diagnóstico gratuito</a>
       </nav>
       <div class="md:hidden">
@@ -32,11 +89,18 @@
   </header>
 
   <main class="pt-20">
-    {% block content %}{% endblock %}
+    <!-- Hero background (parallax) -->
+    <div x-data="parallax" class="relative overflow-hidden">
+      <div aria-hidden="true" class="absolute inset-0 -z-10">
+        <div :style="`transform: translateY(${y}px)`" class="w-full h-full bg-gradient-to-b from-white to-transparent opacity-60"></div>
+      </div>
+
+      {% block content %}{% endblock %}
+    </div>
   </main>
 
   <footer class="border-t bg-white mt-12">
-    <div class="container mx-auto lg:container py-12">
+    <div class="mx-auto lg:container max-w-[var(--container-max)] py-12 px-6">
       <div class="flex flex-col md:flex-row justify-between gap-6">
         <div>
           <h3 class="font-semibold">Sum Connect</h3>
@@ -50,5 +114,25 @@
       <div class="text-sm text-slate-500 mt-6">© Sum Connect — Todos os direitos reservados.</div>
     </div>
   </footer>
+
+  <script>
+    // Activate Lucide icons
+    if (window.lucide) { window.lucide.createIcons(); }
+
+    // Simple card hover microinteraction for progressive enhancement
+    document.addEventListener('mouseover', (e) => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      card.style.transform = 'translateY(-6px)';
+      card.style.transition = 'transform 200ms ease, box-shadow 200ms ease';
+      card.style.boxShadow = '0 10px 20px rgba(2,6,23,0.08)';
+    });
+    document.addEventListener('mouseleave', (e) => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      card.style.transform = '';
+      card.style.boxShadow = '';
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+
+  <!-- soft gradient band -->
+  <g opacity="0.9">
+    <ellipse cx="400" cy="200" rx="520" ry="220" fill="url(#g1)"/>
+    <ellipse cx="1200" cy="700" rx="480" ry="260" fill="url(#g2)"/>
+  </g>
+
+  <!-- abstract flow lines -->
+  <g stroke="#2563EB" stroke-width="2" stroke-opacity="0.65" fill="none">
+    <path d="M120 680 C320 600, 480 420, 820 380" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 720 C560 660, 940 540, 1300 480" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- boxes suggestive of dashboards -->
+  <g fill="#ffffff" stroke="#CBD5E1" stroke-width="1">
+    <rect x="860" y="220" width="340" height="200" rx="8" fill-opacity="0.9"/>
+    <rect x="200" y="320" width="380" height="180" rx="8" fill-opacity="0.95"/>
+  </g>
+
+  <!-- small nodes -->
+  <g fill="#2563EB">
+    <circle cx="820" cy="380" r="4"/>
+    <circle cx="300" cy="720" r="4"/>
+    <circle cx="1200" cy="480" r="4"/>
+  </g>
+
+  <!-- subtle grid lines -->
+  <g stroke="#CBD5E1" stroke-opacity="0.06" stroke-width="1">
+    <path d="M0 100 H1600"/>
+    <path d="M0 200 H1600"/>
+    <path d="M0 300 H1600"/>
+  </g>
+
+</svg>
