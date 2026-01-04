@@ -1,15 +1,22 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20">
+<section class="py-20" x-data="fadeIn">
   <div class="container mx-auto lg:container">
-    <h1 class="text-3xl font-bold">Como trabalhamos</h1>
-    <ol class="mt-6 space-y-3 list-decimal list-inside">
-      <li>Primeiro contato</li>
-      <li>Diagnóstico rápido</li>
-      <li>Proposta personalizada</li>
-      <li>Desenvolvimento</li>
-      <li>Evolução contínua</li>
-    </ol>
+    <div class="grid grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl font-bold">Como trabalhamos</h1>
+        <ol class="mt-6 space-y-3 list-decimal list-inside">
+          <li>Primeiro contato</li>
+          <li>Diagnóstico rápido</li>
+          <li>Proposta personalizada</li>
+          <li>Desenvolvimento</li>
+          <li>Evolução contínua</li>
+        </ol>
+      </div>
+      <div class="rounded-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Processo de trabalho" class="w-full h-full object-cover rounded-lg">
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

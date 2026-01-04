@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from .models import ContactRequest
+import requests
+import json
 
 
 def home(request):
@@ -28,13 +31,25 @@ def why(request):
 
 def contact(request):
     if request.method == 'POST':
-        ContactRequest.objects.create(
-            name=request.POST.get('name',''),
-            company=request.POST.get('company',''),
-            role=request.POST.get('role',''),
-            employees_count=request.POST.get('employees_count') or None,
-            main_challenge=request.POST.get('main_challenge',''),
-        )
+        # Coletar dados do formulário
+        data = {
+            'name': request.POST.get('name', ''),
+            'company': request.POST.get('company', ''),
+            'role': request.POST.get('role', ''),
+            'employees_count': request.POST.get('employees_count') or None,
+            'main_challenge': request.POST.get('main_challenge', ''),
+        }
+        
+        # Salvar no banco de dados
+        ContactRequest.objects.create(**data)
+        
+        # Enviar para webhook n8n
+        try:
+            webhook_url = 'https://n8n.sumconnectia.tech/webhook/novoLead'
+            requests.post(webhook_url, json=data, timeout=10)
+        except Exception as e:
+            print(f"Erro ao enviar para webhook: {e}")
+        
         return redirect('contact')
     return render(request, 'website/contact.html')
 

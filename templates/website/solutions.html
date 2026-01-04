@@ -1,28 +1,32 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20">
+<section class="py-20" x-data="fadeIn">
   <div class="container mx-auto lg:container">
     <h1 class="text-3xl font-bold">Soluções</h1>
     <div class="grid grid-cols-2 gap-6 mt-8">
-      <div class="card p-6">
+      <div class="card p-6" x-data="fadeIn">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop" alt="Consultoria" class="w-full h-48 object-cover rounded-lg mb-4">
         <h3 class="font-semibold">Consultoria em Automação e Processos</h3>
         <p class="text-sm text-slate-600 mt-2">Mapeamento, priorização e plano de automação com foco em economia operacional.</p>
       </div>
       <div class="card p-6">
+        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65b?w=600&h=300&fit=crop" alt="RPA e Automação" class="w-full h-48 object-cover rounded-lg mb-4">
         <h3 class="font-semibold">Automações RPA e n8n</h3>
         <p class="text-sm text-slate-600 mt-2">Automatizamos tarefas repetitivas conectando sistemas e planilhas.</p>
       </div>
-      <div class="card p-6">
+      <div class="card p-6" x-data="fadeIn">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop" alt="Dashboards" class="w-full h-48 object-cover rounded-lg mb-4">
         <h3 class="font-semibold">Dashboards e Análise de Dados</h3>
         <p class="text-sm text-slate-600 mt-2">Painéis com KPIs diários para decisões operacionais.</p>
       </div>
-      <div class="card p-6">
+      <div class="card p-6" x-data="fadeIn">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop" alt="Sistemas Web" class="w-full h-48 object-cover rounded-lg mb-4">
         <h3 class="font-semibold">Sistemas Web Sob Medida</h3>
         <p class="text-sm text-slate-600 mt-2">APIs e sistemas adaptados à operação do cliente.</p>
       </div>
     </div>
     <div class="mt-6">
-      <a href="/contato/" class="btn btn-primary">Quero saber qual solução faz sentido para minha empresa</a>
+      <a href="/contato/" class="btn btn-primary px-6 py-3 text-base font-semibold">Quero saber qual solução faz sentido para minha empresa</a>
     </div>
     <div class="mt-8">
       <h4 class="font-semibold">Agentes de IA</h4>

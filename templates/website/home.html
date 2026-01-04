@@ -2,21 +2,54 @@
 {% block content %}
   {% include 'website/components/hero.html' %}
   {% include 'website/components/problem_section.html' %}
-  {% include 'website/components/solution_section.html' %}
 
-  <section class="py-12">
+  <section class="py-12" x-data="fadeIn">
     <div class="container mx-auto lg:container">
-      <h2 class="text-2xl font-semibold">Como funciona</h2>
-      <ol class="mt-4 space-y-3 list-decimal list-inside">
-        <li>Diagnóstico rápido dos processos</li>
-        <li>Desenho de automações e fluxos</li>
-        <li>Implementação técnica</li>
-        <li>Acompanhamento contínuo</li>
-      </ol>
-      <div class="mt-6">
-        <a href="/contato/" class="btn btn-outline">Quero mapear meus gargalos</a>
+      <h2 class="text-2xl font-semibold mb-8">Como funciona</h2>
+      <div class="flex items-center justify-between gap-2 overflow-x-auto pb-4 hide-scrollbar">
+        <div class="flex-shrink-0 text-center">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
+            <div class="text-lg font-bold text-sc-accent">1</div>
+          </div>
+          <p class="text-xs font-semibold max-w-[100px]">Diagnóstico rápido</p>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-sc-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
+            <div class="text-lg font-bold text-sc-accent">2</div>
+          </div>
+          <p class="text-xs font-semibold max-w-[100px]">Desenho automações</p>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-sc-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
+            <div class="text-lg font-bold text-sc-accent">3</div>
+          </div>
+          <p class="text-xs font-semibold max-w-[100px]">Implementação</p>
+        </div>
+        <div class="flex-shrink-0">
+          <svg class="w-5 h-5 text-sc-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
+            <div class="text-lg font-bold text-sc-accent">4</div>
+          </div>
+          <p class="text-xs font-semibold max-w-[100px]">Acompanhamento</p>
+        </div>
       </div>
     </div>
   </section>
+
+  {% include 'website/components/solution_section.html' %}
 
 {% endblock %}

@@ -1,15 +1,22 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20">
+<section class="py-20" x-data="slideInLeft">
   <div class="container mx-auto lg:container">
-    <h1 class="text-3xl font-bold">Por que escolher a Sum Connect</h1>
-    <ul class="mt-6 space-y-2">
-      <li>Atendimento próximo</li>
-      <li>Projetos sob medida</li>
-      <li>Visão técnica + negócio</li>
-      <li>Experiência em grandes operações</li>
-      <li>Foco em redução de custo</li>
-    </ul>
+    <div class="grid grid-cols-2 gap-8 items-center">
+      <div class="rounded-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Diferenciais Sum Connect" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <div>
+        <h1 class="text-3xl font-bold">Por que escolher a Sum Connect</h1>
+        <ul class="mt-6 space-y-2">
+          <li>Atendimento próximo</li>
+          <li>Projetos sob medida</li>
+          <li>Visão técnica + negócio</li>
+          <li>Experiência em grandes operações</li>
+          <li>Foco em redução de custo</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

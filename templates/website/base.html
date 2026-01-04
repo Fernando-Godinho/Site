@@ -54,6 +54,240 @@
     }
     /* Subtle focus outline for accessibility */
     .focus-ring:focus{outline:2px solid var(--sc-accent);outline-offset:2px}
+
+    /* Pulse animation for CTA button */
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      }
+      50% {
+        box-shadow: 0 4px 32px rgba(37, 99, 235, 0.8), 0 0 40px rgba(37, 99, 235, 0.6);
+      }
+    }
+
+    .btn-primary-pulse {
+      animation: pulse-glow 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Modern button styles */
+    .btn-primary, .btn.btn-primary {
+      background-color: var(--sc-accent);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-primary:hover, .btn.btn-primary:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.45), 0 0 20px rgba(37, 99, 235, 0.3);
+    }
+    .btn-primary:active, .btn.btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      color: var(--sc-accent);
+      border: 2px solid var(--sc-accent);
+      background-color: transparent;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-outline:hover {
+      background-color: var(--sc-accent);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35), 0 0 16px rgba(37, 99, 235, 0.25);
+    }
+    .btn-outline:active {
+      transform: translateY(0);
+    }
+
+    /* Fade-in animations */
+    [x-data*="fadeIn"] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease-out, transform 600ms ease-out;
+    }
+    [x-data*="fadeIn"].animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Slide-in from left animations */
+    [x-data*="slideInLeft"] {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 600ms ease-out, transform 600ms ease-out;
+    }
+    [x-data*="slideInLeft"].animate-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Form styles */
+    input, textarea {
+      border: 1px solid #e2e8f0 !important;
+      background-color: #f8fafc !important;
+      color: #0f172a !important;
+      transition: all 200ms ease;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus {
+      background-color: #fff !important;
+      border-color: var(--sc-accent) !important;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    input::placeholder, textarea::placeholder {
+      color: #94a3b8;
+    }
+    .card {
+      transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.25), 0 0 18px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Dark mode */
+    html.dark {
+      color-scheme: dark;
+    }
+    html.dark body {
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+    html.dark .bg-white {
+      background-color: #1e293b;
+    }
+    html.dark .text-slate-700 {
+      color: #cbd5e1;
+    }
+    html.dark .text-slate-600 {
+      color: #94a3b8;
+    }
+    html.dark .text-slate-500 {
+      color: #64748b;
+    }
+    html.dark .border-t {
+      border-color: #334155;
+    }
+    html.dark input,
+    html.dark textarea {
+      background-color: #1e293b !important;
+      color: #f1f5f9 !important;
+      border-color: #334155 !important;
+    }
+    html.dark input::placeholder,
+    html.dark textarea::placeholder {
+      color: #64748b;
+    }
+    html.dark .card {
+      background-color: #1e293b;
+      border-color: #334155;
+    }
+    html.dark .bg-gray-50 {
+      background-color: #0f172a;
+    }
+    html.dark .bg-gradient-to-b {
+      background: linear-gradient(to bottom, #1e293b, #0f172a);
+    }
+    html.dark .bg-blue-50 {
+      background-color: #1e3a8a;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Dark mode toggle switch */
+    .dark-mode-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: 60px;
+      height: 32px;
+      background-color: #cbd5e1;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background-color 300ms ease;
+    }
+    
+    .dark-mode-toggle.active {
+      background-color: #1e293b;
+    }
+    
+    .dark-mode-toggle::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color: white;
+      border-radius: 50%;
+      left: 3px;
+      transition: left 300ms ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dark-mode-toggle.active::after {
+      left: 31px;
+    }
+    
+    .dark-mode-toggle svg {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      z-index: 10;
+      transition: opacity 300ms ease;
+    }
+    
+    .dark-mode-toggle .sun-icon {
+      left: 8px;
+      opacity: 1;
+      color: #f59e0b;
+    }
+    
+    .dark-mode-toggle.active .sun-icon {
+      opacity: 0;
+    }
+    
+    .dark-mode-toggle .moon-icon {
+      right: 8px;
+      opacity: 0;
+      color: #fbbf24;
+    }
+    
+    .dark-mode-toggle.active .moon-icon {
+      opacity: 1;
+    }
+
+    /* Navigation bar gradient */
+    header {
+      background: linear-gradient(135deg, #2563EB 0%, #0F172A 100%);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+    }
+    header a,
+    header button {
+      color: #ffffff;
+    }
+    header a:hover {
+      color: #e0e7ff;
+    }
+    header button svg {
+      color: #ffffff !important;
+      fill: #ffffff !important;
+    }
+    html.dark header {
+      background: linear-gradient(135deg, #1e40af 0%, #020617 100%);
+    }
   </style>
 
   <script>
@@ -68,19 +302,60 @@
             this.y = window.scrollY * this.speed;
           });
         }
+      }));
+
+      Alpine.data('fadeIn', () => ({
+        visible: false,
+        init() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setTimeout(() => {
+                  entry.target.classList.add('animate-in');
+                }, 50);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+          observer.observe(this.$el);
+        }
+      }));
+
+      Alpine.data('slideInLeft', () => ({
+        visible: false,
+        init() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setTimeout(() => {
+                  entry.target.classList.add('animate-in');
+                }, 50);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+          observer.observe(this.$el);
+        }
       }))
     })
   </script>
 </head>
 <body class="antialiased">
-  <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-40 shadow-sm">
+  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="if(darkMode) document.documentElement.classList.add('dark')">
     <div class="mx-auto lg:container max-w-[var(--container-max)] flex items-center justify-between h-16 px-6">
-      <a href="/" class="font-semibold text-lg text-sc-black">Sum Connect</a>
+      <a href="/" class="font-semibold text-lg">Sum Connect</a>
       <nav class="hidden md:flex gap-6 items-center">
-        <a href="/sobre/" class="text-slate-700 hover:text-sc-accent">Sobre</a>
-        <a href="/solucoes/" class="text-slate-700 hover:text-sc-accent">Soluções</a>
-        <a href="/como-trabalhamos/" class="text-slate-700 hover:text-sc-accent">Como trabalhamos</a>
-        <a href="/contato/" class="btn btn-sm btn-primary">Solicitar diagnóstico gratuito</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/solucoes/">Soluções</a>
+        <a href="/como-trabalhamos/">Como trabalhamos</a>
+        <a href="/contato/" class="btn btn-md btn-primary ml-4 px-6 btn-primary-pulse">Solicitar diagnóstico gratuito</a>
+        <div @click="darkMode = !darkMode; localStorage.setItem('darkMode', darkMode); document.documentElement.classList.toggle('dark')" 
+             :class="darkMode ? 'dark-mode-toggle active' : 'dark-mode-toggle'"
+             class="dark-mode-toggle"
+             title="Alternar modo claro/escuro">
+          <svg class="sun-icon" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m3.08-3.08l4.24-4.24M19.78 19.78l-4.24-4.24m-3.08-3.08l-4.24-4.24"/></svg>
+          <svg class="moon-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
       </nav>
       <div class="md:hidden">
         <button x-data @click="$dispatch('toggle-menu')" class="btn btn-ghost">☰</button>

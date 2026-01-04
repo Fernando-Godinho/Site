@@ -1,18 +1,25 @@
-<section class="py-12">
+<section class="py-12" x-data="slideInLeft">
   <div class="container mx-auto lg:container">
-    <h2 class="text-2xl font-semibold">O problema não é falta de pessoas. É excesso de processos manuais.</h2>
-    <div class="grid grid-cols-3 gap-6 mt-6">
-      <div class="card p-6">
-        <h4 class="font-semibold">Custos administrativos inflados</h4>
-        <p class="text-sm text-slate-600 mt-2">Desperdício com atividades que não agregam valor.</p>
+    <div class="grid grid-cols-2 gap-8 items-center">
+      <div class="rounded-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Problemas operacionais" class="w-full h-full object-cover rounded-lg">
       </div>
-      <div class="card p-6">
-        <h4 class="font-semibold">Decisões lentas</h4>
-        <p class="text-sm text-slate-600 mt-2">Falta de indicadores e integração atrasa decisões críticas.</p>
-      </div>
-      <div class="card p-6">
-        <h4 class="font-semibold">Pessoas presas a tarefas repetitivas</h4>
-        <p class="text-sm text-slate-600 mt-2">Talento sendo usado para trabalho operacional.</p>
+      <div>
+        <h2 class="text-2xl font-semibold">O problema não é falta de pessoas. É excesso de processos manuais.</h2>
+        <div class="grid grid-cols-1 gap-6 mt-6">
+          <div class="card p-6" x-data="fadeIn">
+            <h4 class="font-semibold">Custos administrativos inflados</h4>
+            <p class="text-sm text-slate-600 mt-2">Desperdício com atividades que não agregam valor.</p>
+          </div>
+          <div class="card p-6" x-data="fadeIn">
+            <h4 class="font-semibold">Decisões lentas</h4>
+            <p class="text-sm text-slate-600 mt-2">Falta de indicadores e integração atrasa decisões críticas.</p>
+          </div>
+          <div class="card p-6" x-data="fadeIn">
+            <h4 class="font-semibold">Pessoas presas a tarefas repetitivas</h4>
+            <p class="text-sm text-slate-600 mt-2">Talento sendo usado para trabalho operacional.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

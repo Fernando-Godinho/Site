@@ -1,11 +1,11 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20">
+<section class="py-20" x-data="slideInLeft">
   <div class="container mx-auto lg:container">
     <h1 class="text-3xl font-bold">Blog</h1>
     <div class="mt-6 space-y-4">
       {% for p in posts %}
-        <a href="/blog/{{ p.slug }}/" class="block card p-4">
+        <a href="/blog/{{ p.slug }}/" class="block card p-4" x-data="fadeIn">
           <h3 class="font-semibold">{{ p.title }}</h3>
         </a>
       {% endfor %}
