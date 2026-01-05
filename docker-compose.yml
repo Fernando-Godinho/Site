@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: sumconnect-web
+    ports:
+      - "5556:8000"
+    environment:
+      - DEBUG=False
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+    command: python manage.py runserver 0.0.0.0:8000
