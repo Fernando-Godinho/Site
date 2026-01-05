@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CDN with theme extension for palette and fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -29,7 +30,6 @@
       }
     }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/daisyui/dist/full.css" rel="stylesheet">
 
   <!-- Lucide icons -->
@@ -396,17 +396,21 @@
 
     // Simple card hover microinteraction for progressive enhancement
     document.addEventListener('mouseover', (e) => {
-      const card = e.target.closest('.card');
-      if (!card) return;
-      card.style.transform = 'translateY(-6px)';
-      card.style.transition = 'transform 200ms ease, box-shadow 200ms ease';
-      card.style.boxShadow = '0 10px 20px rgba(2,6,23,0.08)';
+      if (e.target && typeof e.target.closest === 'function') {
+        const card = e.target.closest('.card');
+        if (!card) return;
+        card.style.transform = 'translateY(-6px)';
+        card.style.transition = 'transform 200ms ease, box-shadow 200ms ease';
+        card.style.boxShadow = '0 10px 20px rgba(2,6,23,0.08)';
+      }
     });
     document.addEventListener('mouseleave', (e) => {
-      const card = e.target.closest('.card');
-      if (!card) return;
-      card.style.transform = '';
-      card.style.boxShadow = '';
+      if (e.target && typeof e.target.closest === 'function') {
+        const card = e.target.closest('.card');
+        if (!card) return;
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      }
     });
   </script>
 </body>

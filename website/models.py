@@ -7,6 +7,7 @@ class ContactRequest(models.Model):
     role = models.CharField(max_length=200, blank=True)
     employees_count = models.PositiveIntegerField(null=True, blank=True)
     main_challenge = models.TextField(blank=True)
+    whatsapp = models.CharField(max_length=20, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

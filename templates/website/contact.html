@@ -1,19 +1,48 @@
 {% extends 'website/base.html' %}
 {% block content %}
 <section class="py-20" x-data="fadeIn">
-  <div class="container mx-auto lg:container max-w-2xl">
-    <h1 class="text-3xl font-bold">Descubra onde sua empresa está perdendo tempo e dinheiro</h1>
-    <form method="post" class="mt-6 space-y-4">
-      {% csrf_token %}
-      <input name="name" placeholder="Nome" class="input input-bordered w-full" required>
-      <input name="company" placeholder="Empresa" class="input input-bordered w-full">
-      <input name="role" placeholder="Cargo" class="input input-bordered w-full">
-      <input name="employees_count" placeholder="Nº de colaboradores" type="number" class="input input-bordered w-full">
-      <textarea name="main_challenge" placeholder="Principal desafio" class="textarea textarea-bordered w-full"></textarea>
-      <div>
-        <button type="submit" class="btn btn-primary px-6 py-3 text-base font-semibold">Agendar diagnóstico gratuito</button>
+  <div class="mx-auto lg:container max-w-[var(--container-max)] px-6">
+    <div class="grid grid-cols-2 gap-12 items-center">
+      <div class="rounded-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop" alt="Diagnóstico empresarial" class="w-full h-full object-cover rounded-lg">
       </div>
-    </form>
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Descubra onde sua empresa está perdendo tempo e dinheiro</h1>
+        <p class="text-slate-600 mb-8">Preencha o formulário abaixo e receba uma análise personalizada.</p>
+        <form method="post" class="space-y-5">
+          {% csrf_token %}
+          <div>
+            <label class="text-sm font-semibold text-slate-700 block mb-2">Nome completo</label>
+            <input name="name" placeholder="Seu nome" class="input input-bordered w-full rounded-lg py-2.5" required>
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-slate-700 block mb-2">Empresa</label>
+            <input name="company" placeholder="Nome da empresa" class="input input-bordered w-full rounded-lg py-2.5">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold text-slate-700 block mb-2">Cargo</label>
+              <input name="role" placeholder="Seu cargo" class="input input-bordered w-full rounded-lg py-2.5">
+            </div>
+            <div>
+              <label class="text-sm font-semibold text-slate-700 block mb-2">Nº de colaboradores</label>
+              <input name="employees_count" placeholder="Ex: 50" type="number" class="input input-bordered w-full rounded-lg py-2.5">
+            </div>
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-slate-700 block mb-2">WhatsApp</label>
+            <input name="whatsapp" placeholder="(11) 99999-9999" type="tel" class="input input-bordered w-full rounded-lg py-2.5">
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-slate-700 block mb-2">Principal desafio</label>
+            <textarea name="main_challenge" placeholder="Descreva seu maior desafio operacional..." class="textarea textarea-bordered w-full rounded-lg py-2.5" rows="4"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-md btn-primary px-8 py-3 text-base font-semibold w-full rounded-lg">Agendar diagnóstico gratuito</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

@@ -38,6 +38,7 @@ def contact(request):
             'role': request.POST.get('role', ''),
             'employees_count': request.POST.get('employees_count') or None,
             'main_challenge': request.POST.get('main_challenge', ''),
+            'whatsapp': request.POST.get('whatsapp', ''),
         }
         
         # Salvar no banco de dados
@@ -46,9 +47,15 @@ def contact(request):
         # Enviar para webhook n8n
         try:
             webhook_url = 'https://n8n.sumconnectia.tech/webhook/novoLead'
-            requests.post(webhook_url, json=data, timeout=10)
+            response = requests.post(webhook_url, json=data, timeout=10)
+            print(f"✅ Webhook enviado com sucesso! Status: {response.status_code}")
+            print(f"Resposta: {response.text}")
+        except requests.exceptions.Timeout:
+            print(f"❌ Timeout ao enviar para webhook")
+        except requests.exceptions.ConnectionError as e:
+            print(f"❌ Erro de conexão ao webhook: {e}")
         except Exception as e:
-            print(f"Erro ao enviar para webhook: {e}")
+            print(f"❌ Erro ao enviar para webhook: {e}")
         
         return redirect('contact')
     return render(request, 'website/contact.html')
