@@ -1,28 +1,20 @@
 FROM python:3.13-slim
 
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update -qq && \
+    apt-get install -y -qq build-essential curl && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
-# Copy project
 COPY . .
 
-# Create staticfiles directory
-RUN mkdir -p /app/staticfiles
+RUN chmod +x entrypoint.sh
 
-# Collect static files
-RUN python manage.py collectstatic --noinput
+EXPOSE 5556
 
-# Expose port
-EXPOSE 8000
-
-# Run with Gunicorn for production
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "60", "sumconnect.wsgi:application"]
+ENTRYPOINT ["./entrypoint.sh"]
