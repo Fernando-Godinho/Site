@@ -1,20 +1,56 @@
+version: '3.8'
+
 services:
-  web:
-    build: .
-    container_name: sumconnect-web
+  app:
+    image: python:3.13-slim
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-django-insecure-production-change-me-12345}
+      DEBUG: "False"
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1}
+      PYTHONUNBUFFERED: "1"
+    working_dir: /workspace/sumconnect
     ports:
       - "5556:8000"
-    environment:
-      - DEBUG=False
-      - SECRET_KEY=${SECRET_KEY:-change-this-in-production}
-      - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1}
     volumes:
-      - ./db.sqlite3:/app/db.sqlite3
-      - ./static:/app/static
-      - ./staticfiles:/app/staticfiles
+      - app_media:/workspace/sumconnect/media
+      - app_static:/workspace/sumconnect/staticfiles
+      - db_data:/workspace/sumconnect
+    
+    command: >
+      sh -c "
+        apt-get update -qq &&
+        apt-get install -y -qq git netcat-traditional build-essential pkg-config curl &&
+        cd /workspace/sumconnect &&
+        if [ -d .git ]; then
+          echo 'Repositório já existe, atualizando...' &&
+          git reset --hard HEAD &&
+          git pull origin master;
+        else
+          echo 'Inicializando repositório...' &&
+          git init &&
+          git remote add origin https://github.com/Fernando-Godinho/Site.git &&
+          git fetch origin master &&
+          git reset --hard origin/master &&
+          git branch -M main;
+        fi &&
+        echo 'Instalando dependências...' &&
+        pip install -q -r requirements.txt &&
+        pip install -q gunicorn &&
+        echo 'Executando migrações...' &&
+        python manage.py migrate --noinput &&
+        echo 'Coletando arquivos estáticos...' &&
+        python manage.py collectstatic --noinput --clear &&
+        echo 'Iniciando servidor...' &&
+        gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 60 sumconnect.wsgi:application
+      "
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
       interval: 30s
       timeout: 10s
       retries: 3
+
+volumes:
+  app_media:
+  app_static:
+  db_data:
