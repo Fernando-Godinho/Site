@@ -72,3 +72,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CSRF Settings
+CSRF_TRUSTED_ORIGINS = [
+    'https://site.sumconnectia.tech',
+    'http://site.sumconnectia.tech',
+    'https://www.sumconnectia.tech',
+    'http://www.sumconnectia.tech',
+    'http://69.62.89.102:5556',
+    'http://localhost:5556',
+    'http://127.0.0.1:5556',
+]
+
+# Se estiver usando HTTPS (recomendado para produção)
+CSRF_COOKIE_SECURE = False  # Mude para True se usar HTTPS
+CSRF_COOKIE_SAMESITE = 'Lax'
+
+# SESSION Settings (relacionado ao CSRF)
+SESSION_COOKIE_SECURE = False  # Mude para True se usar HTTPS
+SESSION_COOKIE_SAMESITE = 'Lax'
