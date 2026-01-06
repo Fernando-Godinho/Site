@@ -9,7 +9,7 @@
       <div>
         <h1 class="text-4xl font-bold mb-2">Descubra onde sua empresa está perdendo tempo e dinheiro</h1>
         <p class="text-slate-600 mb-8">Preencha o formulário abaixo e receba uma análise personalizada.</p>
-        <form method="post" class="space-y-5">
+        <form id="contactForm" class="space-y-5">
           {% csrf_token %}
           <div>
             <label class="text-sm font-semibold text-slate-700 block mb-2">Nome completo</label>
@@ -45,4 +45,77 @@
     </div>
   </div>
 </section>
+
+<!-- Modal de Sucesso -->
+<dialog id="successModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-green-400">
+    <div class="flex justify-center mb-6">
+      <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center animate-bounce">
+        <svg class="w-10 h-10 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+    </div>
+    
+    <h3 class="font-bold text-2xl text-center mb-2 text-slate-800">Ótimo! Recebemos seu contato 🎉</h3>
+    <p class="text-center text-slate-600 mb-6">Um especialista da Sumconnect já vai entrar em contato com você em instantes via WhatsApp ou email.</p>
+    
+    <div class="bg-white rounded-lg p-4 mb-6 border-l-4 border-blue-500">
+      <p class="text-sm text-slate-700"><strong>O que esperar:</strong></p>
+      <ul class="text-sm text-slate-600 mt-2 space-y-1">
+        <li>✓ Análise personalizada do seu negócio</li>
+        <li>✓ Oportunidades de automação</li>
+        <li>✓ Sem compromisso ou custo</li>
+      </ul>
+    </div>
+    
+    <div class="modal-action">
+      <button class="btn btn-primary w-full rounded-lg" onclick="document.getElementById('successModal').close(); location.reload();">Voltar ao site</button>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button type="button">fechar</button>
+  </form>
+</dialog>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    
+    // Mostrar loading
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    fetch('{% url "contact" %}', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Limpar formulário
+        document.getElementById('contactForm').reset();
+        // Mostrar modal
+        document.getElementById('successModal').showModal();
+      }
+    })
+    .catch(error => {
+      console.error('Erro:', error);
+      alert('Houve um erro ao enviar o formulário. Tente novamente.');
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    });
+  });
+</script>
 {% endblock %}

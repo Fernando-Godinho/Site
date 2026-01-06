@@ -57,6 +57,9 @@ def contact(request):
         except Exception as e:
             print(f"❌ Erro ao enviar para webhook: {e}")
         
+        # Retornar JSON se for AJAX
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            return JsonResponse({'success': True, 'message': 'Contato enviado com sucesso!'})
         return redirect('contact')
     return render(request, 'website/contact.html')
 
