@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11448e;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad5)"/>
+  
+  <!-- Client circle -->
+  <circle cx="200" cy="300" r="70" fill="#11448e" opacity="0.8"/>
+  <text x="200" y="315" font-size="50" text-anchor="middle" fill="white">🏢</text>
+  
+  <!-- Center handshake -->
+  <circle cx="400" cy="300" r="60" fill="#10B981" opacity="0.9"/>
+  <text x="400" y="320" font-size="48" text-anchor="middle" fill="white">🤝</text>
+  
+  <!-- Sum Connect circle -->
+  <circle cx="600" cy="300" r="70" fill="#11448e" opacity="0.8"/>
+  <text x="600" y="315" font-size="50" text-anchor="middle" fill="white">⚙️</text>
+  
+  <!-- Connection lines -->
+  <line x1="270" y1="300" x2="340" y2="300" stroke="#06B6D4" stroke-width="3"/>
+  <line x1="460" y1="300" x2="530" y2="300" stroke="#06B6D4" stroke-width="3"/>
+  
+  <!-- Values below -->
+  <g>
+    <circle cx="150" cy="480" r="35" fill="#11448e" opacity="0.7"/>
+    <text x="150" y="490" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Premium</text>
+  </g>
+  
+  <g>
+    <circle cx="350" cy="480" r="35" fill="#11448e" opacity="0.7"/>
+    <text x="350" y="490" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Técnica</text>
+  </g>
+  
+  <g>
+    <circle cx="550" cy="480" r="35" fill="#11448e" opacity="0.7"/>
+    <text x="550" y="490" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Resultado</text>
+  </g>
+  
+  <text x="400" y="550" font-size="32" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">Parceria Estratégica</text>
+</svg>

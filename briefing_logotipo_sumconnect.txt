@@ -1,0 +1,121 @@
+# BRIEFING RÁPIDO – CRIAÇÃO DE LOGOTIPO
+
+## 1. Informações Básicas
+
+- **Nome da empresa:** Sumconnect
+- **Slogan:** "A inteligência artificial a serviço da automação inteligente"
+- **Website:** https://sumconnectia.tech/
+
+---
+
+## 2. Sobre a Empresa
+
+### O que a empresa faz?
+A Sumconnect é uma consultoria de automação de processos administrativos e operacionais através de inteligência artificial e tecnologia. Oferece soluções de automação como uma estratégia transformadora (não apenas como software) para empresas que buscam escalar operações além das limitações de planilhas e processos manuais.
+
+### Principais diferenciais tecnológicos:
+- Automação inteligente com IA (n8n, webhooks, integração com sistemas)
+- Abordagem estratégica (automação como negócio, não apenas ferramenta)
+- Foco em processos administrativos escaláveis
+- Gestão inteligente de leads e prospecção
+
+---
+
+## 3. Público-Alvo
+
+### Perfil do cliente ideal:
+- **Tipo:** B2B
+- **Segmento:** PMEs, startups e empresas em crescimento
+- **Porte:** Pequenas e médias empresas (até centenas de funcionários)
+- **Cargo:** Gestores, diretores operacionais, empreendedores, CFOs
+
+### Principais dores que a empresa resolve:
+- Custos ocultos de não automatizar processos
+- Gargalos operacionais causados por planilhas
+- Falta de escalabilidade em processos manuais
+- Busca por eficiência sem grandes investimentos em tecnologia
+
+---
+
+## 4. Posicionamento e Personalidade da Marca
+
+### Como a marca deve ser percebida:
+Inovadora, confiável, técnica, humana, transformadora e acessível. Uma parceira que entende a realidade operacional das empresas em crescimento e oferece soluções práticas baseadas em IA.
+
+### 3 a 5 palavras-chave que definem a marca:
+1. Automação Inteligente
+2. Transformação Operacional
+3. Escalabilidade
+4. Inovação Acessível
+5. Eficiência Estratégica
+
+---
+
+## 5. Estilo do Logotipo
+
+### Preferência de estilo:
+- ✅ **Tecnológico** (com toque de inovação)
+- ✅ **Minimalista** (limpeza visual)
+- ✅ **Futurista** (refletindo IA)
+- ❌ Evitar: Corporativo pesado ou muito cartoon
+
+---
+
+## 6. Cores e Tipografia
+
+### Cores sugeridas:
+- **Primária:** Azul tecnológico ou ciano (confiança, tecnologia, inovação)
+- **Secundária:** Verde (crescimento, escalabilidade) ou laranja (energia, inovação)
+- **Acentos:** Branco e cinza para contraste
+
+### Há alguma cor institucional já definida?
+Não identificada. Sugestão: definir azul como cor institucional (tecnologia + confiança)
+
+### Tipografia:
+✅ **Moderna | ✅ Técnica | ✅ Sem serifa**
+
+---
+
+## 7. Aplicações do Logotipo
+
+### Onde o logotipo será mais utilizado:
+- ✅ Website (https://sumconnectia.tech/)
+- ✅ App / Software (integração com n8n, dashboards)
+- ✅ Redes sociais (LinkedIn, Instagram)
+- ✅ Apresentações (pitchs, propostas, webinars)
+- ✅ Materiais impressos (cartões, propostas)
+- ✅ Favicon e ícone de app
+
+---
+
+## 8. Concorrentes
+
+### Segmento competitivo:
+https://borderlessdev.com/
+
+https://drivedata.com.br/
+
+### O que NÃO deve ser parecido:
+- Evitar logos muito genéricos de "automação" (engrenagens óbvias)
+- Não copiar designs de plataformas concorrentes (n8n, Make)
+- Evitar elementos muito corporativos e sem personalidade
+
+---
+
+## 9. Informações Adicionais
+
+### Símbolos/Conceitos sugeridos para representação:
+1. **Interconexão inteligente** – setas conectando nós/pontos (automação entre sistemas)
+2. **Neurônios/rede neural** – linhas formando padrão de IA
+3. **Fluxo ascendente** – indicando crescimento e escalabilidade
+4. **Letra "S" estilizada** – do Sumconnect, com elemento tecnológico integrado
+5. **Nuvem conectada** – infraestrutura de IA em nuvem
+6. **Circuito com humanidade** – linha de circuito formando elemento orgânico (tecnologia acessível)
+
+### Essência visual:
+Um logotipo moderno, limpo e memorável que transmita tecnologia, inovação e confiança, sem ser frio ou genérico. Deve funcionar bem em pequenos tamanhos (favicon, app) e em escalas grandes (apresentações).
+
+---
+
+**Data de criação:** 8 de janeiro de 2026
+

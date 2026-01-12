@@ -29,7 +29,7 @@ Paleta principal:
 - Cinza carvão: #1E293B
 - Cinza claro (background): #F8FAFC
 - Cinza médio: #CBD5E1
-- Azul estratégico (accent): #2563EB
+- Azul estratégico (accent): #11448e
 
 Tipografia:
 - Família: `Inter` (Google Fonts) para títulos e textos.

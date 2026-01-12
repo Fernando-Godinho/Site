@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11448e;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad5)"/>
+  <circle cx="150" cy="300" r="60" fill="#11448e" opacity="0.9"/>
+  <text x="150" y="310" font-size="16" font-weight="bold" text-anchor="middle" fill="white">API</text>
+  <circle cx="400" cy="200" r="60" fill="#11448e" opacity="0.8"/>
+  <text x="400" y="210" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Sistema</text>
+  <circle cx="400" cy="400" r="60" fill="#11448e" opacity="0.8"/>
+  <text x="400" y="410" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Dados</text>
+  <circle cx="650" cy="300" r="60" fill="#11448e" opacity="0.9"/>
+  <text x="650" y="310" font-size="16" font-weight="bold" text-anchor="middle" fill="white">n8n</text>
+  <line x1="210" y1="280" x2="340" y2="220" stroke="#06B6D4" stroke-width="3" opacity="0.7"/>
+  <line x1="210" y1="320" x2="340" y2="380" stroke="#06B6D4" stroke-width="3" opacity="0.7"/>
+  <line x1="460" y1="200" x2="590" y2="280" stroke="#06B6D4" stroke-width="3" opacity="0.7"/>
+  <line x1="460" y1="400" x2="590" y2="320" stroke="#06B6D4" stroke-width="3" opacity="0.7"/>
+  <circle cx="400" cy="300" r="40" fill="#10B981" opacity="0.6"/>
+  <text x="400" y="550" font-size="32" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">Integração de Sistemas</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11448e;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#grad8)"/>
+  
+  <!-- Consulting document -->
+  <rect x="50" y="80" width="150" height="200" fill="#11448e" opacity="0.6" rx="5"/>
+  <line x1="70" y1="110" x2="200" y2="110" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="70" y1="140" x2="200" y2="140" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="70" y1="170" x2="200" y2="170" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="70" y1="200" x2="200" y2="200" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="70" y1="230" x2="180" y2="230" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="70" y1="260" x2="200" y2="260" stroke="#06B6D4" stroke-width="2"/>
+  
+  <!-- Arrow -->
+  <path d="M 210 180 L 270 180" stroke="#06B6D4" stroke-width="3"/>
+  <polygon points="280,180 260,170 260,190" fill="#06B6D4"/>
+  
+  <!-- Automation workflow -->
+  <circle cx="350" cy="100" r="30" fill="#11448e" opacity="0.8"/>
+  <text x="350" y="110" font-size="14" font-weight="bold" text-anchor="middle" fill="white">RPA</text>
+  
+  <circle cx="350" cy="180" r="30" fill="#11448e" opacity="0.8"/>
+  <text x="350" y="190" font-size="14" font-weight="bold" text-anchor="middle" fill="white">n8n</text>
+  
+  <circle cx="350" cy="260" r="30" fill="#11448e" opacity="0.8"/>
+  <text x="350" y="270" font-size="14" font-weight="bold" text-anchor="middle" fill="white">API</text>
+  
+  <line x1="350" y1="130" x2="350" y2="150" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="350" y1="210" x2="350" y2="230" stroke="#06B6D4" stroke-width="2"/>
+  
+  <!-- Arrow -->
+  <path d="M 380 180 L 430 180" stroke="#06B6D4" stroke-width="3"/>
+  <polygon points="440,180 420,170 420,190" fill="#06B6D4"/>
+  
+  <!-- Result -->
+  <rect x="450" y="130" width="120" height="100" fill="#10B981" opacity="0.7" rx="5"/>
+  <text x="510" y="155" font-size="18" font-weight="bold" text-anchor="middle" fill="white">✓</text>
+  <text x="510" y="190" font-size="12" text-anchor="middle" fill="white">Processos</text>
+  <text x="510" y="210" font-size="12" text-anchor="middle" fill="white">Automatizados</text>
+</svg>

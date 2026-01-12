@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#11448e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#0F172A"/>
+  <polyline points="100,450 200,380 300,320 400,200 500,280 600,150 700,100" fill="none" stroke="url(#grad4)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="100" cy="450" r="8" fill="#11448e"/>
+  <circle cx="200" cy="380" r="8" fill="#11448e"/>
+  <circle cx="300" cy="320" r="8" fill="#11448e"/>
+  <circle cx="400" cy="200" r="8" fill="#06B6D4"/>
+  <circle cx="500" cy="280" r="8" fill="#11448e"/>
+  <circle cx="600" cy="150" r="10" fill="#10B981"/>
+  <circle cx="700" cy="100" r="10" fill="#10B981"/>
+  <path d="M 650 120 L 720 50" stroke="#10B981" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="730,40 715,65 725,55" fill="#10B981"/>
+  <line x1="50" y1="500" x2="750" y2="500" stroke="#334155" stroke-width="2"/>
+  <line x1="50" y1="500" x2="50" y2="50" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="550" font-size="32" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">Escalabilidade</text>
+</svg>

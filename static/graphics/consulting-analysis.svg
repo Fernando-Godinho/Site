@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad7)"/>
+  
+  <!-- Magnifying glass icon -->
+  <circle cx="400" cy="250" r="90" fill="none" stroke="#11448e" stroke-width="4"/>
+  <line x1="480" y1="330" x2="550" y2="400" stroke="#11448e" stroke-width="4"/>
+  
+  <!-- Inside the magnifying glass - indicators -->
+  <circle cx="350" cy="220" r="20" fill="#EF4444" opacity="0.8"/>
+  <text x="350" y="228" font-size="14" font-weight="bold" text-anchor="middle" fill="white">❌</text>
+  
+  <circle cx="420" cy="200" r="20" fill="#F97316" opacity="0.8"/>
+  <text x="420" y="208" font-size="14" font-weight="bold" text-anchor="middle" fill="white">⚠️</text>
+  
+  <circle cx="450" cy="280" r="20" fill="#EF4444" opacity="0.8"/>
+  <text x="450" y="288" font-size="14" font-weight="bold" text-anchor="middle" fill="white">💸</text>
+  
+  <circle cx="370" cy="300" r="20" fill="#F97316" opacity="0.8"/>
+  <text x="370" y="308" font-size="14" font-weight="bold" text-anchor="middle" fill="white">⏱️</text>
+  
+  <!-- Results boxes below -->
+  <rect x="100" y="400" width="280" height="100" fill="#11448e" opacity="0.3" rx="8"/>
+  <text x="240" y="425" font-size="14" font-weight="bold" text-anchor="middle" fill="#06B6D4">Pontos de Melhoria</text>
+  <text x="240" y="450" font-size="12" text-anchor="middle" fill="#CBD5E1">Identificamos onde</text>
+  <text x="240" y="470" font-size="12" text-anchor="middle" fill="#CBD5E1">sua empresa perde</text>
+  <text x="240" y="490" font-size="12" text-anchor="middle" fill="#CBD5E1">tempo e dinheiro</text>
+  
+  <rect x="420" y="400" width="280" height="100" fill="#10B981" opacity="0.3" rx="8"/>
+  <text x="560" y="425" font-size="14" font-weight="bold" text-anchor="middle" fill="#10B981">Plano de Ação</text>
+  <text x="560" y="450" font-size="12" text-anchor="middle" fill="#CBD5E1">Soluções práticas</text>
+  <text x="560" y="470" font-size="12" text-anchor="middle" fill="#CBD5E1">e personalizadas</text>
+  <text x="560" y="490" font-size="12" text-anchor="middle" fill="#CBD5E1">para seu negócio</text>
+  
+  <text x="400" y="550" font-size="32" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">Análise Profunda</text>
+</svg>

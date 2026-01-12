@@ -3,7 +3,7 @@
   <defs>
     <linearGradient id="g1" x1="0" x2="1">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0"/>
-      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#11448e" stop-opacity="0.08"/>
     </linearGradient>
     <linearGradient id="g2" x1="0" x2="1">
       <stop offset="0%" stop-color="#0F172A" stop-opacity="0.06"/>
@@ -20,7 +20,7 @@
   </g>
 
   <!-- abstract flow lines -->
-  <g stroke="#2563EB" stroke-width="2" stroke-opacity="0.65" fill="none">
+  <g stroke="#11448e" stroke-width="2" stroke-opacity="0.65" fill="none">
     <path d="M120 680 C320 600, 480 420, 820 380" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M300 720 C560 660, 940 540, 1300 480" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
@@ -32,7 +32,7 @@
   </g>
 
   <!-- small nodes -->
-  <g fill="#2563EB">
+  <g fill="#11448e">
     <circle cx="820" cy="380" r="4"/>
     <circle cx="300" cy="720" r="4"/>
     <circle cx="1200" cy="480" r="4"/>

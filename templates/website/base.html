@@ -17,11 +17,16 @@
       theme: {
         extend: {
           colors: {
+            'sc-torea-bay': '#11448e',
+            'sc-jungle-green': '#2aac9e',
+            'sc-blue-chill': '#097f9e',
+            'sc-venice-blue': '#0b6997',
+            'sc-tory-blue': '#105291',
+            'sc-eastern-blue': '#23a39f',
             'sc-black': '#0F172A',
-            'sc-charcoal': '#1E293B',
             'sc-bg': '#F8FAFC',
             'sc-mid': '#CBD5E1',
-            'sc-accent': '#2563EB'
+            'sc-accent': '#11448e'
           },
           fontFamily: {
             sans: ['Inter', 'ui-sans-serif', 'system-ui']
@@ -35,16 +40,24 @@
   <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide/dist/lucide.min.js"></script>
 
+  <!-- DotLottie Animation Web Component -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+
   <!-- Alpine.js for microinteractions and parallax control -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <style>
     :root{
+      --sc-torea-bay: #11448e;
+      --sc-jungle-green: #2aac9e;
+      --sc-blue-chill: #097f9e;
+      --sc-venice-blue: #0b6997;
+      --sc-tory-blue: #105291;
+      --sc-eastern-blue: #23a39f;
       --sc-black: #0F172A;
-      --sc-charcoal: #1E293B;
       --sc-bg: #F8FAFC;
       --sc-mid: #CBD5E1;
-      --sc-accent: #2563EB;
+      --sc-accent: #11448e;
       --container-max: 1100px;
     }
     html,body{font-family:Inter,ui-sans-serif,system-ui;color:rgba(15,23,42,0.95);background:var(--sc-bg)}
@@ -58,10 +71,10 @@
     /* Pulse animation for CTA button */
     @keyframes pulse-glow {
       0%, 100% {
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 4px 12px rgba(17, 68, 142, 0.3);
       }
       50% {
-        box-shadow: 0 4px 32px rgba(37, 99, 235, 0.8), 0 0 40px rgba(37, 99, 235, 0.6);
+        box-shadow: 0 4px 32px rgba(17, 68, 142, 0.8), 0 0 40px rgba(17, 68, 142, 0.6);
       }
     }
 
@@ -80,9 +93,9 @@
       transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .btn-primary:hover, .btn.btn-primary:hover {
-      background-color: #1d4ed8;
+      background-color: #0a3669;
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.45), 0 0 20px rgba(37, 99, 235, 0.3);
+      box-shadow: 0 12px 24px rgba(17, 68, 142, 0.45), 0 0 20px rgba(17, 68, 142, 0.3);
     }
     .btn-primary:active, .btn.btn-primary:active {
       transform: translateY(0);
@@ -100,7 +113,7 @@
       background-color: var(--sc-accent);
       color: white;
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35), 0 0 16px rgba(37, 99, 235, 0.25);
+      box-shadow: 0 12px 24px rgba(17, 68, 142, 0.35), 0 0 16px rgba(17, 68, 142, 0.25);
     }
     .btn-outline:active {
       transform: translateY(0);
@@ -140,7 +153,7 @@
       background-color: #fff !important;
       border-color: var(--sc-accent) !important;
       outline: none;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 0 0 3px rgba(17, 68, 142, 0.1);
     }
     input::placeholder, textarea::placeholder {
       color: #94a3b8;
@@ -151,7 +164,7 @@
     }
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.25), 0 0 18px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 12px 28px rgba(17, 68, 142, 0.25), 0 0 18px rgba(17, 68, 142, 0.2);
     }
 
     /* Dark mode */
@@ -269,10 +282,11 @@
       opacity: 1;
     }
 
-    /* Navigation bar gradient */
+    /* Navigation bar - dark matte gray */
     header {
-      background: linear-gradient(135deg, #2563EB 0%, #0F172A 100%);
-      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+      background-color: #1a1a1a;
+      backdrop-filter: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
     header a,
     header button {
@@ -286,7 +300,8 @@
       fill: #ffffff !important;
     }
     html.dark header {
-      background: linear-gradient(135deg, #1e40af 0%, #020617 100%);
+      background-color: #1a1a1a;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
   </style>
 
@@ -341,9 +356,11 @@
   </script>
 </head>
 <body class="antialiased">
-  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="if(darkMode) document.documentElement.classList.add('dark')">
+  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur" x-data="{ darkMode: localStorage.getItem('darkMode') !== 'false' }" x-init="if(darkMode) document.documentElement.classList.add('dark')">
     <div class="mx-auto lg:container max-w-[var(--container-max)] flex items-center justify-between h-16 px-6">
-      <a href="/" class="font-semibold text-lg">Sum Connect</a>
+      <a href="/" class="flex items-center">
+        <img src="/static/graphics/LOGOS.svg" alt="Sum Connect" class="h-14 w-auto">
+      </a>
       <nav class="hidden md:flex gap-6 items-center">
         <a href="/sobre/">Sobre</a>
         <a href="/solucoes/">Soluções</a>
