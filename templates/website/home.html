@@ -3,50 +3,157 @@
   {% include 'website/components/hero.html' %}
   {% include 'website/components/problem_section.html' %}
 
-  <section class="py-12" x-data="fadeIn">
-    <div class="container mx-auto lg:container">
-      <h2 class="text-2xl font-semibold mb-8">Como funciona</h2>
-      <div class="flex items-center justify-between gap-2 overflow-x-auto pb-4 hide-scrollbar">
-        <div class="flex-shrink-0 text-center">
-          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
-            <div class="text-lg font-bold text-sc-accent">1</div>
+  <section class="py-8 sm:py-12 md:py-16" x-data="fadeIn">
+    <div class="container mx-auto lg:container px-4">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-8" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Como funciona</h2>
+      <!-- Desktop: Horizontal scroll -->
+      <div class="hidden md:flex flex-wrap items-center justify-center gap-6 md:gap-8 relative py-8">
+        <!-- Connecting line for desktop -->
+        <svg class="absolute top-1/2 left-0 right-0 w-full h-1 transform -translate-y-1/2 pointer-events-none" style="height: 3px;" preserveAspectRatio="none" viewBox="0 0 1200 3">
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#11448e;stop-opacity:0" />
+              <stop offset="50%" style="stop-color:#11448e;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#11448e;stop-opacity:0" />
+            </linearGradient>
+            <filter id="lineGlow">
+              <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <line x1="0" y1="1.5" x2="1200" y2="1.5" stroke="url(#lineGradient)" stroke-width="3" filter="url(#lineGlow)" style="animation: shimmer 3s infinite;"/>
+        </svg>
+
+        <div class="flex flex-col items-center gap-3 relative z-10">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">1</div>
           </div>
-          <p class="text-xs font-semibold max-w-[100px]">Diagnóstico rápido</p>
+          <p class="text-xs sm:text-sm font-semibold text-center whitespace-nowrap" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Diagnóstico rápido</p>
         </div>
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 flex items-center hidden lg:flex">
           <svg class="w-5 h-5 text-sc-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </div>
-        <div class="flex-shrink-0 text-center">
-          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
-            <div class="text-lg font-bold text-sc-accent">2</div>
+        <div class="flex flex-col items-center gap-3 relative z-10">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">2</div>
           </div>
-          <p class="text-xs font-semibold max-w-[100px]">Desenho automações</p>
+          <p class="text-xs sm:text-sm font-semibold text-center whitespace-nowrap" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Desenho automações</p>
         </div>
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 flex items-center hidden lg:flex">
           <svg class="w-5 h-5 text-sc-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </div>
-        <div class="flex-shrink-0 text-center">
-          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
-            <div class="text-lg font-bold text-sc-accent">3</div>
+        <div class="flex flex-col items-center gap-3 relative z-10">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">3</div>
           </div>
-          <p class="text-xs font-semibold max-w-[100px]">Implementação</p>
+          <p class="text-xs sm:text-sm font-semibold text-center whitespace-nowrap" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Implementação</p>
         </div>
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 flex items-center hidden lg:flex">
           <svg class="w-5 h-5 text-sc-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </div>
-        <div class="flex-shrink-0 text-center">
-          <div class="w-16 h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
-            <div class="text-lg font-bold text-sc-accent">4</div>
+        <div class="flex flex-col items-center gap-3 relative z-10">
+          <div class="w-16 h-16 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">4</div>
           </div>
-          <p class="text-xs font-semibold max-w-[100px]">Acompanhamento</p>
+          <p class="text-xs sm:text-sm font-semibold text-center whitespace-nowrap" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Acompanhamento</p>
         </div>
       </div>
+
+      <!-- Mobile: Vertical stack -->
+      <div class="md:hidden space-y-4 relative px-6">
+        <!-- Connecting line for mobile -->
+        <svg class="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 pointer-events-none" style="width: 3px;" preserveAspectRatio="none" viewBox="0 0 3 800">
+          <defs>
+            <linearGradient id="lineGradientMobile" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#11448e;stop-opacity:0" />
+              <stop offset="50%" style="stop-color:#11448e;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#11448e;stop-opacity:0" />
+            </linearGradient>
+            <filter id="lineGlowMobile">
+              <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <line x1="1.5" y1="0" x2="1.5" y2="800" stroke="url(#lineGradientMobile)" stroke-width="3" filter="url(#lineGlowMobile)" style="animation: shimmer 3s infinite;"/>
+        </svg>
+
+        <div class="flex flex-col items-center gap-3 text-center relative z-10">
+          <div class="w-14 h-14 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">1</div>
+          </div>
+          <div>
+            <p class="font-semibold text-sm" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Diagnóstico rápido</p>
+            <p class="text-xs mt-1" style="color: #64748b; transition: color 300ms ease;" :style="darkMode ? 'color: #cbd5e1;' : 'color: #64748b;'">Mapeamos gargalos em poucos dias</p>
+          </div>
+        </div>
+        
+        <div class="flex justify-center my-2">
+          <svg class="w-4 h-4 text-sc-accent transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 text-center relative z-10">
+          <div class="w-14 h-14 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">2</div>
+          </div>
+          <div>
+            <p class="font-semibold text-sm" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Desenho automações</p>
+            <p class="text-xs mt-1" style="color: #64748b; transition: color 300ms ease;" :style="darkMode ? 'color: #cbd5e1;' : 'color: #64748b;'">Workflows inteligentes com RPA</p>
+          </div>
+        </div>
+
+        <div class="flex justify-center my-2">
+          <svg class="w-4 h-4 text-sc-accent transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 text-center relative z-10">
+          <div class="w-14 h-14 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">3</div>
+          </div>
+          <div>
+            <p class="font-semibold text-sm" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Implementação</p>
+            <p class="text-xs mt-1" style="color: #64748b; transition: color 300ms ease;" :style="darkMode ? 'color: #cbd5e1;' : 'color: #64748b;'">Deploy e integração com sistemas</p>
+          </div>
+        </div>
+
+        <div class="flex justify-center my-2">
+          <svg class="w-4 h-4 text-sc-accent transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 text-center relative z-10">
+          <div class="w-14 h-14 rounded-lg bg-blue-50 dark:bg-blue-900 flex items-center justify-center">
+            <div class="text-lg font-bold" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">4</div>
+          </div>
+          <div>
+            <p class="font-semibold text-sm" style="color: #0f172a; transition: color 300ms ease;" :style="darkMode ? 'color: white;' : 'color: #0f172a;'">Acompanhamento</p>
+            <p class="text-xs mt-1" style="color: #64748b; transition: color 300ms ease;" :style="darkMode ? 'color: #cbd5e1;' : 'color: #64748b;'">Suporte e otimização contínua</p>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes shimmer {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 1; }
+        }
+      </style>
     </div>
   </section>
 

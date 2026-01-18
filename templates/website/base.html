@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -43,6 +44,9 @@
   <!-- DotLottie Animation Web Component -->
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
 
+  <!-- Mobile Responsive Styles -->
+  <link rel="stylesheet" href="{% static 'mobile-responsive.css' %}">
+
   <!-- Alpine.js for microinteractions and parallax control -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
@@ -61,6 +65,9 @@
       --container-max: 1100px;
     }
     html,body{font-family:Inter,ui-sans-serif,system-ui;color:rgba(15,23,42,0.95);background:var(--sc-bg)}
+    @media (max-width: 640px) {
+      html,body{background:var(--sc-bg)}
+    }
     /* Desktop-first small helper */
     @media (max-width: 1024px) {
       .lg\:container { padding-left: 1rem; padding-right: 1rem; }
@@ -356,28 +363,38 @@
   </script>
 </head>
 <body class="antialiased">
-  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur" x-data="{ darkMode: localStorage.getItem('darkMode') !== 'false' }" x-init="if(darkMode) document.documentElement.classList.add('dark')">
-    <div class="mx-auto lg:container max-w-[var(--container-max)] flex items-center justify-between h-16 px-6">
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur" x-data="{ darkMode: localStorage.getItem('darkMode') !== 'false' }" x-init="if(darkMode) document.documentElement.classList.add('dark')">
+    <div class="mx-auto lg:container max-w-[var(--container-max)] flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6">
       <a href="/" class="flex items-center">
-        <img src="/static/graphics/LOGOS.svg" alt="Sum Connect" class="h-14 w-auto">
+        <img src="/static/graphics/LOGOS.svg" alt="Sum Connect" class="h-10 sm:h-14 w-auto">
       </a>
-      <nav class="hidden md:flex gap-6 items-center">
-        <a href="/sobre/">Sobre</a>
-        <a href="/solucoes/">Soluções</a>
-        <a href="/como-trabalhamos/">Como trabalhamos</a>
-        <a href="/contato/" class="btn btn-md btn-primary ml-4 px-6 btn-primary-pulse">Solicitar diagnóstico gratuito</a>
+      <nav class="hidden md:flex gap-4 lg:gap-6 items-center">
+        <a href="/sobre/" class="text-sm lg:text-base hover:text-sc-accent transition">Sobre</a>
+        <a href="/solucoes/" class="text-sm lg:text-base hover:text-sc-accent transition">Soluções</a>
+        <a href="/como-trabalhamos/" class="text-sm lg:text-base hover:text-sc-accent transition">Como trabalhamos</a>
+        <a href="/contato/" class="btn btn-md btn-primary ml-2 lg:ml-4 px-4 lg:px-6 py-2 text-sm lg:text-base btn-primary-pulse">Diagnóstico</a>
         <div @click="darkMode = !darkMode; localStorage.setItem('darkMode', darkMode); document.documentElement.classList.toggle('dark')" 
              :class="darkMode ? 'dark-mode-toggle active' : 'dark-mode-toggle'"
-             class="dark-mode-toggle"
+             class="dark-mode-toggle ml-4"
              title="Alternar modo claro/escuro">
           <svg class="sun-icon" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m3.08-3.08l4.24-4.24M19.78 19.78l-4.24-4.24m-3.08-3.08l-4.24-4.24"/></svg>
           <svg class="moon-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </div>
       </nav>
-      <div class="md:hidden">
-        <button x-data @click="$dispatch('toggle-menu')" class="btn btn-ghost">☰</button>
+      <div class="md:hidden flex items-center gap-3">
+        <div @click="darkMode = !darkMode; localStorage.setItem('darkMode', darkMode); document.documentElement.classList.toggle('dark')" 
+             :class="darkMode ? 'dark-mode-toggle active' : 'dark-mode-toggle'"
+             class="dark-mode-toggle"
+             title="Alternar modo">
+          <svg class="sun-icon" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m3.08-3.08l4.24-4.24M19.78 19.78l-4.24-4.24m-3.08-3.08l-4.24-4.24"/></svg>
+          <svg class="moon-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
+        <button x-data @click="$dispatch('toggle-menu')" class="btn btn-ghost p-2 text-xl">☰</button>
       </div>
     </div>
+    
+    <!-- Mobile Menu -->
+    {% include 'website/components/mobile-menu.html' %}
   </header>
 
   <main class="pt-20">

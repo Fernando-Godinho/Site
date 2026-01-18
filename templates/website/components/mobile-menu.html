@@ -1,0 +1,57 @@
+<!-- Mobile Menu Drawer -->
+<div x-data="{ mobileMenuOpen: false }" @toggle-menu.window="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
+  <!-- Mobile Menu Button (já existe no header) -->
+  <!-- Menu Drawer -->
+  <div 
+    x-show="mobileMenuOpen" 
+    @click.outside="mobileMenuOpen = false"
+    x-transition
+    class="fixed top-16 left-0 right-0 bottom-0 bg-black/50 z-30 md:hidden"
+  ></div>
+
+  <nav
+    x-show="mobileMenuOpen"
+    @click.outside="mobileMenuOpen = false"
+    x-transition
+    class="fixed top-16 left-0 right-0 bg-white dark:bg-slate-900 shadow-lg z-40 md:hidden max-h-[calc(100vh-64px)] overflow-y-auto"
+  >
+    <div class="flex flex-col p-4 gap-2">
+      <a 
+        href="/sobre/" 
+        @click="mobileMenuOpen = false"
+        class="px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition"
+      >
+        Sobre
+      </a>
+      <a 
+        href="/solucoes/" 
+        @click="mobileMenuOpen = false"
+        class="px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition"
+      >
+        Soluções
+      </a>
+      <a 
+        href="/como-trabalhamos/" 
+        @click="mobileMenuOpen = false"
+        class="px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition"
+      >
+        Como trabalhamos
+      </a>
+      <a 
+        href="/blog/" 
+        @click="mobileMenuOpen = false"
+        class="px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition"
+      >
+        Blog
+      </a>
+      <div class="h-px bg-gray-200 dark:bg-slate-700 my-2"></div>
+      <a 
+        href="/contato/" 
+        @click="mobileMenuOpen = false"
+        class="btn btn-primary w-full text-center py-3 font-semibold"
+      >
+        Solicitar diagnóstico
+      </a>
+    </div>
+  </nav>
+</div>
