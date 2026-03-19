@@ -1,156 +1,162 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-12 sm:py-16 md:py-20" x-data="fadeIn">
-  <div class="mx-auto lg:container max-w-[var(--container-max)] px-4 sm:px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-      <div>
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3">Descubra onde sua empresa está perdendo tempo e dinheiro</h1>
-        <p class="text-sm sm:text-base text-slate-600 mb-6 md:mb-8">Preencha o formulário e receba uma análise personalizada gratuita.</p>
-        <div class="rounded-lg overflow-hidden flex items-center justify-center">
-          <dotlottie-wc src="/static/graphics/Animation - 1712809735601.json" autoplay loop style="width: 100%; max-width: 500px; height: auto;"></dotlottie-wc>
+<section style="padding:6rem 0;min-height:90vh;display:flex;align-items:flex-start;">
+  <div class="sc-container" style="width:100%;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;" class="contact-grid">
+
+      <!-- Left: Copy -->
+      <div class="anim-fade">
+        <div class="sc-badge" style="margin-bottom:1.25rem;">Diagnóstico Gratuito</div>
+        <h1 style="font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:#fff;line-height:1.1;margin-bottom:1.25rem;">
+          Descubra onde sua empresa está<br><span class="gradient-text">perdendo tempo e dinheiro</span>
+        </h1>
+        <p style="font-size:0.98rem;color:rgba(148,163,184,0.85);line-height:1.75;margin-bottom:2.5rem;">
+          Preencha o formulário e um especialista da Sum Connect entrará em contato. Você receberá uma análise personalizada e gratuita — sem compromisso.
+        </p>
+
+        <!-- What to expect -->
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:32px;height:32px;flex-shrink:0;border-radius:8px;background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(14,165,233,0.05));border:1px solid rgba(14,165,233,0.3);display:flex;align-items:center;justify-content:center;margin-top:0.1rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Outfit',sans-serif;font-weight:600;font-size:0.92rem;color:#e2e8f0;">Análise personalizada do seu negócio</div>
+              <div style="font-size:0.84rem;color:rgba(148,163,184,0.7);margin-top:0.15rem;">Mapeamos seus processos e identificamos gargalos reais.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:32px;height:32px;flex-shrink:0;border-radius:8px;background:linear-gradient(135deg,rgba(34,211,238,0.2),rgba(34,211,238,0.05));border:1px solid rgba(34,211,238,0.3);display:flex;align-items:center;justify-content:center;margin-top:0.1rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Outfit',sans-serif;font-weight:600;font-size:0.92rem;color:#e2e8f0;">Oportunidades de automação identificadas</div>
+              <div style="font-size:0.84rem;color:rgba(148,163,184,0.7);margin-top:0.15rem;">Onde automatizar primeiro para gerar o maior retorno.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:32px;height:32px;flex-shrink:0;border-radius:8px;background:linear-gradient(135deg,rgba(16,185,129,0.2),rgba(16,185,129,0.05));border:1px solid rgba(16,185,129,0.3);display:flex;align-items:center;justify-content:center;margin-top:0.1rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Outfit',sans-serif;font-weight:600;font-size:0.92rem;color:#e2e8f0;">Sem custo, sem compromisso</div>
+              <div style="font-size:0.84rem;color:rgba(148,163,184,0.7);margin-top:0.15rem;">Diagnóstico 100% gratuito e sem fidelidade.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lottie -->
+        <div style="opacity:0.85;">
+          <dotlottie-wc src="/static/graphics/Animation - 1712809735601.json" autoplay loop style="width:100%;max-width:320px;height:auto;"></dotlottie-wc>
         </div>
       </div>
-      <div>
-        <form id="contactForm" class="space-y-4 sm:space-y-5">
+
+      <!-- Right: Form -->
+      <div class="glass-card anim-fade" style="padding:2.5rem;transition-delay:0.1s;">
+        <h2 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.25rem;color:#fff;margin-bottom:1.75rem;">Agende seu diagnóstico</h2>
+        <form id="contactForm" style="display:flex;flex-direction:column;gap:1.25rem;">
           {% csrf_token %}
+
           <div>
-            <label class="text-xs sm:text-sm font-semibold text-slate-700 block mb-2">Nome completo</label>
-            <input name="name" placeholder="Seu nome" class="input input-bordered w-full rounded-lg py-2 sm:py-2.5 text-sm" required>
+            <label class="sc-label">Nome completo</label>
+            <input name="name" required placeholder="Seu nome" class="sc-input">
           </div>
+
           <div>
-            <label class="text-xs sm:text-sm font-semibold text-slate-700 block mb-2">Empresa</label>
-            <input name="company" placeholder="Nome da empresa" class="input input-bordered w-full rounded-lg py-2 sm:py-2.5 text-sm">
+            <label class="sc-label">Empresa</label>
+            <input name="company" placeholder="Nome da empresa" class="sc-input">
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
             <div>
-              <label class="text-xs sm:text-sm font-semibold text-slate-700 block mb-2">Cargo</label>
-              <input name="role" placeholder="Seu cargo" class="input input-bordered w-full rounded-lg py-2 sm:py-2.5 text-sm">
+              <label class="sc-label">Cargo</label>
+              <input name="role" placeholder="Seu cargo" class="sc-input">
             </div>
             <div>
-              <label class="text-xs sm:text-sm font-semibold text-slate-700 block mb-2">Nº de colaboradores</label>
-              <input name="employees_count" placeholder="Ex: 50" type="number" class="input input-bordered w-full rounded-lg py-2 sm:py-2.5 text-sm">
+              <label class="sc-label">Nº de colaboradores</label>
+              <input name="employees_count" placeholder="Ex: 80" type="number" class="sc-input">
             </div>
           </div>
+
           <div>
-            <label class="text-xs sm:text-sm font-semibold text-slate-700 block mb-2">WhatsApp</label>
-            <input name="whatsapp" placeholder="(11) 99999-9999" type="tel" class="input input-bordered w-full rounded-lg py-2 sm:py-2.5 text-sm">
+            <label class="sc-label">WhatsApp</label>
+            <input name="whatsapp" placeholder="(11) 99999-9999" type="tel" class="sc-input">
           </div>
+
           <div>
-            <label class="text-xs sm:text-sm font-semibold text-slate-700 block mb-2">Principal desafio</label>
-            <textarea name="main_challenge" placeholder="Descreva seu maior desafio operacional..." class="textarea textarea-bordered w-full rounded-lg py-2 sm:py-2.5 text-sm" rows="4"></textarea>
+            <label class="sc-label">Principal desafio</label>
+            <textarea name="main_challenge" placeholder="Descreva o maior gargalo da sua operação..." class="sc-input" rows="4" style="resize:vertical;"></textarea>
           </div>
-          <div>
-            <button type="submit" class="btn btn-sm sm:btn-md btn-primary px-4 sm:px-8 py-2 sm:py-3 text-xs sm:text-base font-semibold w-full rounded-lg">Agendar diagnóstico gratuito</button>
-          </div>
+
+          <button type="submit" class="btn-primary btn-primary-glow" style="width:100%;font-size:0.98rem;padding:0.9rem 1.5rem;border:none;cursor:pointer;">
+            Agendar diagnóstico gratuito →
+          </button>
         </form>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Modal de Sucesso -->
-<dialog id="successModal" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-green-400 rounded-3xl p-8">
-    <div class="flex justify-center mb-6">
-      <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-        <!-- Ilustração de Mascote Cartoon -->
-        <svg class="w-24 h-24" viewBox="0 0 150 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Cabeça -->
-          <circle cx="75" cy="50" r="28" fill="#8B5CF6" stroke="#7C3AED" stroke-width="2"/>
-          
-          <!-- Olhos -->
-          <circle cx="65" cy="45" r="6" fill="white"/>
-          <circle cx="85" cy="45" r="6" fill="white"/>
-          <circle cx="66" cy="46" r="3" fill="#7C3AED"/>
-          <circle cx="86" cy="46" r="3" fill="#7C3AED"/>
-          
-          <!-- Boca sorridente -->
-          <path d="M65 55Q75 60 85 55" stroke="#7C3AED" stroke-width="2" fill="none" stroke-linecap="round"/>
-          
-          <!-- Corpo -->
-          <ellipse cx="75" cy="90" rx="22" ry="28" fill="#A78BFA" stroke="#8B5CF6" stroke-width="2"/>
-          
-          <!-- Braços -->
-          <ellipse cx="50" cy="85" rx="12" ry="20" fill="#A78BFA" stroke="#8B5CF6" stroke-width="2" transform="rotate(-25 50 85)"/>
-          <ellipse cx="100" cy="85" rx="12" ry="20" fill="#A78BFA" stroke="#8B5CF6" stroke-width="2" transform="rotate(25 100 85)"/>
-          
-          <!-- Mãos -->
-          <circle cx="40" cy="75" r="8" fill="#DDD6FE" stroke="#8B5CF6" stroke-width="1.5"/>
-          <circle cx="110" cy="75" r="8" fill="#DDD6FE" stroke="#8B5CF6" stroke-width="1.5"/>
-          
-          <!-- Pernas -->
-          <rect x="65" y="115" width="10" height="25" rx="5" fill="#8B5CF6" stroke="#7C3AED" stroke-width="1.5"/>
-          <rect x="75" y="115" width="10" height="25" rx="5" fill="#8B5CF6" stroke="#7C3AED" stroke-width="1.5"/>
-          
-          <!-- Pés -->
-          <ellipse cx="70" cy="145" rx="8" ry="6" fill="#DDD6FE" stroke="#8B5CF6" stroke-width="1.5"/>
-          <ellipse cx="80" cy="145" rx="8" ry="6" fill="#DDD6FE" stroke="#8B5CF6" stroke-width="1.5"/>
-          
-          <!-- Estrela de aprovação -->
-          <g transform="translate(110, 30)">
-            <polygon points="0,-8 2.5,-2.5 8,-1 3,2.5 5,8 0,4 -5,8 -3,2.5 -8,-1 -2.5,-2.5" fill="#FBBF24" stroke="#F59E0B" stroke-width="1"/>
-          </g>
-        </svg>
+<!-- Success Modal -->
+<div id="successModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);z-index:300;align-items:center;justify-content:center;padding:1rem;">
+  <div class="glass-card" style="max-width:460px;width:100%;padding:2.5rem;text-align:center;position:relative;border-color:rgba(16,185,129,0.3);box-shadow:0 0 40px rgba(16,185,129,0.1);">
+    <!-- Success icon -->
+    <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(16,185,129,0.2),rgba(16,185,129,0.05));border:2px solid rgba(16,185,129,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:0.75rem;">Recebemos seu contato! 🎉</h3>
+    <p style="font-size:0.92rem;color:rgba(148,163,184,0.85);line-height:1.65;margin-bottom:2rem;">Um especialista da Sum Connect já vai entrar em contato com você em instantes via WhatsApp.</p>
+
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.25rem;margin-bottom:2rem;text-align:left;">
+      <div style="font-family:'Outfit',sans-serif;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:rgba(148,163,184,0.6);margin-bottom:0.75rem;">O que esperar:</div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="font-size:0.87rem;color:rgba(203,213,225,0.85);display:flex;align-items:center;gap:0.5rem;"><span style="color:#34d399;">✓</span> Análise personalizada do seu negócio</div>
+        <div style="font-size:0.87rem;color:rgba(203,213,225,0.85);display:flex;align-items:center;gap:0.5rem;"><span style="color:#34d399;">✓</span> Oportunidades de automação identificadas</div>
+        <div style="font-size:0.87rem;color:rgba(203,213,225,0.85);display:flex;align-items:center;gap:0.5rem;"><span style="color:#34d399;">✓</span> Sem custo, sem compromisso</div>
       </div>
     </div>
-    
-    <h3 class="font-bold text-2xl text-center mb-2 text-slate-800">Ótimo! Recebemos seu contato 🎉</h3>
-    <p class="text-center text-slate-600 mb-6">Um especialista da Sumconnect já vai entrar em contato com você em instantes via WhatsApp.</p>
-    
-    <div class="bg-white rounded-2xl p-4 mb-6 border-l-4 border-blue-500 shadow-sm">
-      <p class="text-sm text-slate-700"><strong>O que esperar:</strong></p>
-      <ul class="text-sm text-slate-600 mt-2 space-y-1">
-        <li>✓ Análise personalizada do seu negócio</li>
-        <li>✓ Oportunidades de automação</li>
-        <li>✓ Sem compromisso ou custo</li>
-      </ul>
-    </div>
-    
-    <div class="modal-action">
-      <button class="btn btn-primary w-full rounded-xl font-semibold" onclick="document.getElementById('successModal').close(); location.reload();">Voltar ao site</button>
-    </div>
+
+    <button onclick="closeSuccessModal()" class="btn-primary" style="width:100%;border:none;cursor:pointer;">
+      Voltar ao site
+    </button>
   </div>
-  <form method="dialog" class="modal-backdrop"></form>
-</dialog>
+</div>
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
     const formData = new FormData(this);
-    const submitButton = this.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    
-    // Mostrar loading
-    submitButton.disabled = true;
-    submitButton.textContent = 'Enviando...';
-    
+    const btn = this.querySelector('button[type="submit"]');
+    const origText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
     fetch('{% url "contact" %}', {
       method: 'POST',
       body: formData,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest',
-      }
+      headers: { 'X-Requested-With': 'XMLHttpRequest' }
     })
-    .then(response => response.json())
+    .then(r => r.json())
     .then(data => {
       if (data.success) {
-        // Limpar formulário
-        document.getElementById('contactForm').reset();
-        // Mostrar modal
-        document.getElementById('successModal').showModal();
+        this.reset();
+        const modal = document.getElementById('successModal');
+        modal.style.display = 'flex';
       }
     })
-    .catch(error => {
-      console.error('Erro:', error);
-      alert('Houve um erro ao enviar o formulário. Tente novamente.');
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
-    })
-    .finally(() => {
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
-    });
+    .catch(() => alert('Houve um erro ao enviar. Tente novamente.'))
+    .finally(() => { btn.disabled = false; btn.textContent = origText; });
+  });
+
+  function closeSuccessModal() {
+    document.getElementById('successModal').style.display = 'none';
+    location.reload();
+  }
+
+  document.getElementById('successModal').addEventListener('click', function(e) {
+    if (e.target === this) closeSuccessModal();
   });
 </script>
 {% endblock %}

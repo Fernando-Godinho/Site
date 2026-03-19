@@ -1,37 +1,150 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20" x-data="fadeIn">
-  <div class="container mx-auto lg:container">
-    <h1 class="text-3xl font-bold">Soluções</h1>
-    <div class="grid grid-cols-2 gap-6 mt-8">
-      <div class="card p-6" x-data="fadeIn">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop" alt="Consultoria em processos" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold">Consultoria em Automação e Processos</h3>
-        <p class="text-sm text-slate-600 mt-2">Mapeamento, priorização e plano de automação com foco em economia operacional.</p>
-      </div>
-      <div class="card p-6">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop" alt="Automações RPA e fluxos" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold">Automações RPA e n8n</h3>
-        <p class="text-sm text-slate-600 mt-2">Automatizamos tarefas repetitivas conectando sistemas e planilhas.</p>
-      </div>
-      <div class="card p-6" x-data="fadeIn">
-        <img src="https://images.unsplash.com/photo-1460925895917-adf4e565db6d?w=600&h=300&fit=crop" alt="Dashboards e indicadores" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold">Dashboards e Análise de Dados</h3>
-        <p class="text-sm text-slate-600 mt-2">Painéis com KPIs diários para decisões operacionais.</p>
-      </div>
-      <div class="card p-6" x-data="fadeIn">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop" alt="Desenvolvimento de sistemas" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold">Sistemas Web Sob Medida</h3>
-        <p class="text-sm text-slate-600 mt-2">APIs e sistemas adaptados à operação do cliente.</p>
-      </div>
-    </div>
-    <div class="mt-6">
-      <a href="/contato/" class="btn btn-primary px-6 py-3 text-base font-semibold">Quero saber qual solução faz sentido para minha empresa</a>
-    </div>
-    <div class="mt-8">
-      <h4 class="font-semibold">Agentes de IA</h4>
-      <p class="text-sm text-slate-600">Em desenvolvimento — protótipos para automação cognitiva.</p>
+
+<!-- ═══ HERO ════════════════════════════════════════════════════════ -->
+<section style="padding:6rem 0 4rem;position:relative;overflow:hidden;background:var(--sc-dark);">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;top:-10%;left:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 65%);"></div>
+    <div style="position:absolute;bottom:-10%;right:-5%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,0.08) 0%,transparent 65%);"></div>
+  </div>
+  <div class="sc-container" style="position:relative;z-index:1;text-align:center;">
+    <div class="anim-fade" style="max-width:720px;margin:0 auto;">
+      <div class="sc-badge" style="margin:0 auto 1.25rem;">Soluções</div>
+      <h1 style="font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:1.25rem;">
+        Do diagnóstico ao resultado — <span class="gradient-text">sem enrolação</span>
+      </h1>
+      <p style="font-size:1.05rem;color:rgba(148,163,184,0.88);line-height:1.75;max-width:580px;margin:0 auto 2.5rem;">
+        Temos quatro pilares de atuação. Cada um criado para resolver um tipo específico de ineficiência operacional — com entrega rápida e ROI mensurável.
+      </p>
     </div>
   </div>
 </section>
+
+<!-- ═══ SOLUÇÕES DETALHADAS ══════════════════════════════════════ -->
+<section style="padding:4rem 0 6rem;background:var(--sc-dark);">
+  <div class="sc-container">
+    <div style="display:flex;flex-direction:column;gap:5rem;">
+
+      <!-- S1: Consultoria & Diagnóstico -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="sol-grid anim-fade">
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;">01 — Consultoria</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1.25rem;">
+            Diagnóstico que revela<br><span class="gradient-text">quanto sua empresa perde</span>
+          </h2>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:1.5rem;">
+            Antes de qualquer implementação, entendemos sua operação de ponta a ponta. Mapeamos processos, entrevistamos times, medimos tempo gasto em cada atividade e calculamos o custo real de cada ineficiência.
+          </p>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:2rem;">
+            O resultado é um plano de ação priorizado: o que automatizar primeiro, por quê, e qual o retorno esperado em reais e em horas liberadas. Tudo em até 5 dias úteis.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Mapeamento completo de processos administrativos</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Cálculo do custo real de cada gargalo identificado</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Plano de automação com ROI projetado</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Entrega em até 5 dias úteis</span></div>
+          </div>
+        </div>
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=560&fit=crop&auto=format" alt="Consultoria e análise de processos" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+
+      <div class="sc-glow-line"></div>
+
+      <!-- S2: Automação RPA -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="sol-grid anim-fade">
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=560&fit=crop&auto=format" alt="Automação e robótica de processos" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;">02 — Automação</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1.25rem;">
+            RPA e workflows que<br><span class="gradient-text">trabalham enquanto você dorme</span>
+          </h2>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:1.5rem;">
+            Construímos robôs e fluxos automáticos para eliminar tarefas repetitivas: lançamentos, envios de email, geração de relatórios, atualização de planilhas, emissão de documentos e muito mais.
+          </p>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:2rem;">
+            Usamos n8n, Python, Power Automate e ferramentas de RPA — sempre escolhendo o que faz mais sentido para o contexto de cada cliente.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#22d3ee;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Robôs que executam tarefas repetitivas 24/7</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#22d3ee;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Integração entre ERP, planilhas, e-mail e CRM</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#22d3ee;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Liberação imediata de horas do time para foco estratégico</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-glow-line"></div>
+
+      <!-- S3: Dashboards -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="sol-grid anim-fade">
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;">03 — Dados</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1.25rem;">
+            Dashboards que transformam<br><span class="gradient-text">dados em decisões</span>
+          </h2>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:1.5rem;">
+            Construímos painéis de controle integrados que mostram em tempo real o que está acontecendo na sua operação — comercial, financeiro, compras, logística. Sem planilha, sem copia-cola, sem atraso de um dia.
+          </p>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:2rem;">
+            Suas decisões de hoje são baseadas nos dados de ontem? Isso tem nome: cegueira operacional. Nós resolvemos isso.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#818cf8;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Painéis de KPIs em tempo real</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#818cf8;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Integração com ERP, RD Station, planilhas e APIs</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#818cf8;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Análise RFV, metas, funil comercial e indicadores de compras</span></div>
+          </div>
+        </div>
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=560&fit=crop&auto=format" alt="Dashboard de dados em tempo real" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+
+      <div class="sc-glow-line"></div>
+
+      <!-- S4: Sistemas -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="sol-grid anim-fade">
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.5);">
+          <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=560&fit=crop&auto=format" alt="Desenvolvimento de sistemas web sob medida" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;">04 — Sistemas</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1.25rem;">
+            Sistemas web e APIs feitos<br><span class="gradient-text">para a sua operação</span>
+          </h2>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:1.5rem;">
+            Quando nenhum software pronto resolve, a gente constrói. Desenvolvemos sistemas internos, APIs de integração e fluxos customizados que se encaixam no seu processo — não o contrário.
+          </p>
+          <p style="font-size:0.97rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:2rem;">
+            Também trabalhamos com Agentes de IA para automação cognitiva: análise de documentos, triagem de leads, respostas automatizadas e muito mais.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#34d399;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">APIs de integração entre qualquer sistema</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#34d399;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Portais e sistemas internos sob medida</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;"><div style="width:6px;height:6px;border-radius:50%;background:#34d399;flex-shrink:0;"></div><span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Agentes de IA para automação cognitiva</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ══════════════════════════════════════════════════ -->
+<section style="padding:5rem 0;background:var(--sc-surface);border-top:1px solid rgba(255,255,255,0.05);text-align:center;">
+  <div class="sc-container">
+    <div class="anim-fade">
+      <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1rem;">
+        Não sabe por onde começar? <span class="gradient-text">A gente sabe.</span>
+      </h2>
+      <p style="font-size:1rem;color:rgba(148,163,184,0.82);max-width:480px;margin:0 auto 2rem;line-height:1.7;">
+        Agende um diagnóstico gratuito. Em 5 dias você terá um plano claro com o que deve ser automatizado primeiro.
+      </p>
+      <a href="/contato/" class="btn-primary btn-primary-glow" style="font-size:1rem;padding:0.9rem 2.25rem;">Quero meu diagnóstico gratuito →</a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

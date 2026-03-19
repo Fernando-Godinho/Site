@@ -1,28 +1,132 @@
-
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20" x-data="fadeIn">
-  <div class="container mx-auto lg:container">
-    <div class="grid grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-3xl font-bold">Nascemos dentro de uma empresa com mais de 150 mil colaboradores</h1>
-        <p class="mt-4 text-slate-700">Originados no Grupo GPS, vivemos na prática os problemas de operações em larga escala. Transformamos essa experiência em consultoria aplicada: mapeamento de processos, automações e sistemas que trazem ganhos reais.</p>
-        <h2 class="mt-8 text-xl font-semibold">Ganho com automação</h2>
-        <p class="text-slate-700 mt-2">Redução de custo, maior velocidade na tomada de decisão e realocação de pessoas para tarefas estratégicas.</p>
 
-        <div class="mt-8">
-          <h3 class="font-semibold">Valores</h3>
-          <ul class="mt-4 space-y-2">
-            <li><strong>Premium</strong> — Entrega e atenção personalizada.</li>
-            <li><strong>Técnica</strong> — Soluções baseadas em engenharia e dados.</li>
-            <li><strong>Agressiva</strong> — Resultado acima da promessa.</li>
-          </ul>
-        </div>
+<!-- ═══ HERO ════════════════════════════════════════════════════════ -->
+<section style="padding:6rem 0 4rem;position:relative;overflow:hidden;background:var(--sc-dark);">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;top:-20%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,0.1) 0%,transparent 65%);"></div>
+    <div style="position:absolute;bottom:-10%;left:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.08) 0%,transparent 65%);"></div>
+  </div>
+  <div class="sc-container" style="position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="about-grid">
+      <div class="anim-fade">
+        <div class="sc-badge" style="margin-bottom:1.25rem;">Nossa história</div>
+        <h1 style="font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:#fff;line-height:1.1;margin-bottom:1.5rem;">
+          Nascemos dentro de uma empresa com<br><span class="gradient-text">mais de 150 mil colaboradores</span>
+        </h1>
+        <p style="font-size:1rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:1.25rem;">
+          A Sum Connect surgiu de uma experiência única: vivemos por dentro os problemas operacionais do <strong style="color:#e2e8f0;">Grupo GPS</strong>, um dos maiores grupos de serviços do Brasil. Ali aprendemos que o maior inimigo da eficiência não é falta de talento — é excesso de processo manual.
+        </p>
+        <p style="font-size:1rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:2rem;">
+          Transformamos essa experiência em consultoria aplicada: mapeamos gargalos, desenhamos automações e implementamos sistemas que geram resultado mensurável — sem jargão e sem complexidade desnecessária.
+        </p>
+        <a href="/contato/" class="btn-primary btn-primary-glow">Conheça nossa metodologia →</a>
       </div>
-      <div class="rounded-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop" alt="Desenvolvedores e programadores em ambiente de software house" class="w-full h-full object-cover rounded-lg">
+      <div class="anim-fade" style="transition-delay:0.1s;">
+        <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.4);">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format" alt="Time Sum Connect trabalhando em automação" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ═══ VALORES ══════════════════════════════════════════════════════ -->
+<section style="padding:5rem 0;background:var(--sc-surface);border-top:1px solid rgba(255,255,255,0.05);">
+  <div class="sc-container">
+    <div style="text-align:center;margin-bottom:3.5rem;" class="anim-fade">
+      <div class="sc-badge" style="margin:0 auto 1rem;">Princípios</div>
+      <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;">
+        O que nos move todos os dias
+      </h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="values-grid">
+
+      <div class="glass-card anim-fade" style="padding:2rem;transition-delay:0.05s;">
+        <div style="width:48px;height:48px;border-radius:12px;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(14,165,233,0.05));border:1px solid rgba(14,165,233,0.3);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:#f1f5f9;margin-bottom:0.75rem;">Premium na entrega</h3>
+        <p style="font-size:0.9rem;color:rgba(148,163,184,0.82);line-height:1.65;">
+          Não entregamos projetos genéricos. Cada solução é desenhada para a realidade específica do cliente — com atenção aos detalhes que fazem diferença operacional real.
+        </p>
+      </div>
+
+      <div class="glass-card anim-fade" style="padding:2rem;transition-delay:0.15s;">
+        <div style="width:48px;height:48px;border-radius:12px;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(34,211,238,0.2),rgba(34,211,238,0.05));border:1px solid rgba(34,211,238,0.3);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:#f1f5f9;margin-bottom:0.75rem;">Técnica com propósito</h3>
+        <p style="font-size:0.9rem;color:rgba(148,163,184,0.82);line-height:1.65;">
+          Usamos dados, engenharia e ferramentas modernas — não como fim, mas como meio. O foco sempre é o resultado do negócio, não a sofisticação da tecnologia.
+        </p>
+      </div>
+
+      <div class="glass-card anim-fade" style="padding:2rem;transition-delay:0.25s;">
+        <div style="width:48px;height:48px;border-radius:12px;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(99,102,241,0.05));border:1px solid rgba(99,102,241,0.3);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:#f1f5f9;margin-bottom:0.75rem;">Resultado acima da promessa</h3>
+        <p style="font-size:0.9rem;color:rgba(148,163,184,0.82);line-height:1.65;">
+          Nossa métrica é simples: o cliente sente a diferença. Não medimos sucesso em horas trabalhadas, mas em quanto a operação do cliente melhorou.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIÊNCIA DE ORIGEM ═════════════════════════════════════ -->
+<section style="padding:5rem 0;background:var(--sc-dark);">
+  <div class="sc-container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="about-grid">
+      <div class="anim-fade" style="border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 60px rgba(0,0,0,0.4);">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format" alt="Dashboard e dados analíticos" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="anim-fade" style="transition-delay:0.1s;">
+        <div class="sc-badge" style="margin-bottom:1.25rem;">Por que isso importa</div>
+        <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.7rem,3vw,2.3rem);color:#fff;margin-bottom:1.25rem;">
+          Experiência real de operação em <span class="gradient-text">larga escala</span>
+        </h2>
+        <p style="font-size:0.98rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:1.25rem;">
+          Quando você passou por uma operação de 150 mil pessoas, sabe o que realmente trava uma empresa. Não são falta de recursos — são planilhas duplicadas, processos sem dono, datos que não conversam e decisões baseadas em feeling.
+        </p>
+        <p style="font-size:0.98rem;color:rgba(148,163,184,0.88);line-height:1.8;margin-bottom:2rem;">
+          É exatamente esse olhar que trazemos para as PMEs. Consultoria que veio de dentro, não de livro.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--sc-cyan);flex-shrink:0;"></div>
+            <span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Experiência em operações de 10 a 150.000 colaboradores</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--sc-cyan);flex-shrink:0;"></div>
+            <span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Mais de 20 empresas transformadas com automação</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--sc-cyan);flex-shrink:0;"></div>
+            <span style="font-size:0.9rem;color:rgba(203,213,225,0.85);">Especialistas em RPA, dados, integrações e sistemas sob medida</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ══════════════════════════════════════════════════ -->
+<section style="padding:5rem 0;border-top:1px solid rgba(255,255,255,0.05);background:var(--sc-surface);">
+  <div class="sc-container" style="text-align:center;">
+    <div class="anim-fade">
+      <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1rem;">
+        Pronto para trabalhar com quem <span class="gradient-text">veio de dentro</span>?
+      </h2>
+      <p style="font-size:1rem;color:rgba(148,163,184,0.82);max-width:460px;margin:0 auto 2rem;line-height:1.7;">
+        Agende um diagnóstico gratuito e veja como transformamos operações sem aumentar o time.
+      </p>
+      <a href="/contato/" class="btn-primary btn-primary-glow">Agendar diagnóstico gratuito →</a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

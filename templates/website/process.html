@@ -1,22 +1,163 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<section class="py-20" x-data="fadeIn">
-  <div class="container mx-auto lg:container">
-    <div class="grid grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-3xl font-bold">Como trabalhamos</h1>
-        <ol class="mt-6 space-y-3 list-decimal list-inside">
-          <li>Primeiro contato</li>
-          <li>Diagnóstico rápido</li>
-          <li>Proposta personalizada</li>
-          <li>Desenvolvimento</li>
-          <li>Evolução contínua</li>
-        </ol>
+
+<!-- ═══ HERO ════════════════════════════════════════════════════════ -->
+<section style="padding:6rem 0 4rem;position:relative;overflow:hidden;background:var(--sc-dark);">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;top:-15%;right:-5%;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,0.09) 0%,transparent 65%);"></div>
+  </div>
+  <div class="sc-container" style="position:relative;z-index:1;text-align:center;">
+    <div class="anim-fade" style="max-width:680px;margin:0 auto;">
+      <div class="sc-badge" style="margin:0 auto 1.25rem;">Metodologia</div>
+      <h1 style="font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:1.25rem;">
+        Estruturado, rápido e<br><span class="gradient-text">sem risco para sua operação</span>
+      </h1>
+      <p style="font-size:1.05rem;color:rgba(148,163,184,0.88);line-height:1.75;max-width:560px;margin:0 auto;">
+        Nossa metodologia foi desenhada para gerar resultado real em semanas — não meses. Cada fase tem entregável claro, prazo definido e critério de sucesso mensurável.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FASES DETALHADAS ════════════════════════════════════════════ -->
+<section style="padding:4rem 0 6rem;background:var(--sc-dark);">
+  <div class="sc-container">
+    <div style="display:flex;flex-direction:column;gap:4rem;">
+
+      <!-- Fase 1 -->
+      <div class="glass-card anim-fade" style="padding:3rem;display:grid;grid-template-columns:auto 1fr 1fr;gap:3rem;align-items:start;">
+        <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:4rem;line-height:1;background:linear-gradient(135deg,#0ea5e9,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">01</div>
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;">Primeiro contato</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:0.85rem;">Entendemos sua empresa antes de propor qualquer coisa</h2>
+          <p style="font-size:0.92rem;color:rgba(148,163,184,0.85);line-height:1.75;">
+            A primeira conversa é sobre você. Ouvimos os desafios da operação, o tamanho do time, o que já foi tentado e o que não funcionou. Sem pitch de produto — só escuta ativa. Saímos dessa reunião com uma hipótese de onde estão seus maiores gargalos.
+          </p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.85rem;">Entregáveis</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#0ea5e9;">→</span> Resumo dos principais desafios identificados</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#0ea5e9;">→</span> Hipóteses de oportunidade de automação</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#0ea5e9;">→</span> Decisão conjunta de avançar ou não</div>
+          </div>
+          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);">
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.4rem;">Prazo</div>
+            <div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:#0ea5e9;">1 reunião — gratuita</div>
+          </div>
+        </div>
       </div>
-      <div class="rounded-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Processo e metodologia estruturada" class="w-full h-full object-cover rounded-lg">
+
+      <!-- Fase 2 -->
+      <div class="glass-card anim-fade" style="padding:3rem;display:grid;grid-template-columns:auto 1fr 1fr;gap:3rem;align-items:start;transition-delay:0.1s;">
+        <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:4rem;line-height:1;background:linear-gradient(135deg,#6366f1,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">02</div>
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08);color:#818cf8;">Diagnóstico rápido</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:0.85rem;">Mapeamos o que custa caro em até 5 dias</h2>
+          <p style="font-size:0.92rem;color:rgba(148,163,184,0.85);line-height:1.75;">
+            Mergulhamos na operação: entrevistamos os times, observamos processos, medimos tempo e quantificamos o custo de cada ineficiência. O resultado é um mapa claro de onde sua empresa perde dinheiro e um plano de ação priorizado.
+          </p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.85rem;">Entregáveis</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#6366f1;">→</span> Relatório de diagnóstico operacional</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#6366f1;">→</span> Custo estimado de cada gargalo em R$</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#6366f1;">→</span> Plano de ação priorizado com ROI projetado</div>
+          </div>
+          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);">
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.4rem;">Prazo</div>
+            <div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:#6366f1;">até 5 dias úteis</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fase 3 -->
+      <div class="glass-card anim-fade" style="padding:3rem;display:grid;grid-template-columns:auto 1fr 1fr;gap:3rem;align-items:start;transition-delay:0.2s;">
+        <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:4rem;line-height:1;background:linear-gradient(135deg,#22d3ee,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">03</div>
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;border-color:rgba(34,211,238,0.3);background:rgba(34,211,238,0.08);color:#22d3ee;">Implementação</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:0.85rem;">Construímos e implantamos sem travar sua operação</h2>
+          <p style="font-size:0.92rem;color:rgba(148,163,184,0.85);line-height:1.75;">
+            Desenvolvemos as automações, dashboards ou sistemas definidos no diagnóstico. O processo de implementação é gradual: testamos em paralelo alla operação existente, garantindo que nenhum processo seja interrompido durante a transição.
+          </p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.85rem;">Entregáveis</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#22d3ee;">→</span> Automações em produção e homologadas</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#22d3ee;">→</span> Treinamento do time para uso</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#22d3ee;">→</span> Documentação técnica e manual do usuário</div>
+          </div>
+          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);">
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.4rem;">Prazo</div>
+            <div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:#22d3ee;">2–6 semanas dependendo do escopo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fase 4 -->
+      <div class="glass-card anim-fade" style="padding:3rem;display:grid;grid-template-columns:auto 1fr 1fr;gap:3rem;align-items:start;transition-delay:0.3s;">
+        <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:4rem;line-height:1;background:linear-gradient(135deg,#10b981,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">04</div>
+        <div>
+          <div class="sc-badge" style="margin-bottom:1rem;border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.08);color:#34d399;">Evolução contínua</div>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:0.85rem;">Parceria de longo prazo — o resultado melhora com o tempo</h2>
+          <p style="font-size:0.92rem;color:rgba(148,163,184,0.85);line-height:1.75;">
+            Não somos fornecedor de projeto pontual. Ficamos como parceiros estratégicos: monitoramos as automações, identificamos novas oportunidades de melhoria e evoluímos os sistemas à medida que a empresa cresce.
+          </p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.85rem;">O que inclui</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#34d399;">→</span> Suporte técnico ágil via WhatsApp</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#34d399;">→</span> Monitoramento das automações em produção</div>
+            <div style="font-size:0.87rem;color:rgba(203,213,225,0.82);display:flex;align-items:center;gap:0.5rem;"><span style="color:#34d399;">→</span> Novas iterações e expansões do escopo</div>
+          </div>
+          <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);">
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:rgba(148,163,184,0.5);margin-bottom:0.4rem;">Modelo</div>
+            <div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:#34d399;">Retainer mensal ou projetos sob demanda</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GARANTIA ═══════════════════════════════════════════════════ -->
+<section style="padding:5rem 0;background:var(--sc-surface);border-top:1px solid rgba(255,255,255,0.05);">
+  <div class="sc-container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="about-grid anim-fade">
+      <div>
+        <div class="sc-badge" style="margin-bottom:1.25rem;">Nossa garantia</div>
+        <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:1.25rem;">
+          Se o diagnóstico não revelar nenhuma oportunidade,<br><span class="gradient-text">você não paga nada</span>
+        </h2>
+        <p style="font-size:0.97rem;color:rgba(148,163,184,0.85);line-height:1.8;margin-bottom:2rem;">
+          Temos confiança no processo porque ele vem de experiência real. Em mais de 20 projetos, nunca voltamos de um diagnóstico sem identificar pelo menos uma automação com ROI acima de 3x em 6 meses.
+        </p>
+        <a href="/contato/" class="btn-primary btn-primary-glow">Começar agora — é grátis →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <div class="glass-card" style="padding:1.75rem;text-align:center;">
+          <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:2.5rem;background:linear-gradient(135deg,#0ea5e9,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.4rem;">+20</div>
+          <div style="font-size:0.85rem;color:rgba(148,163,184,0.75);">Empresas transformadas</div>
+        </div>
+        <div class="glass-card" style="padding:1.75rem;text-align:center;">
+          <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:2.5rem;background:linear-gradient(135deg,#6366f1,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.4rem;">5d</div>
+          <div style="font-size:0.85rem;color:rgba(148,163,184,0.75);">Diagnóstico completo</div>
+        </div>
+        <div class="glass-card" style="padding:1.75rem;text-align:center;">
+          <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:2.5rem;background:linear-gradient(135deg,#22d3ee,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.4rem;">-40%</div>
+          <div style="font-size:0.85rem;color:rgba(148,163,184,0.75);">Custo operacional médio</div>
+        </div>
+        <div class="glass-card" style="padding:1.75rem;text-align:center;">
+          <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:2.5rem;background:linear-gradient(135deg,#10b981,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.4rem;">3×</div>
+          <div style="font-size:0.85rem;color:rgba(148,163,184,0.75);">ROI mínimo em 6 meses</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 {% endblock %}

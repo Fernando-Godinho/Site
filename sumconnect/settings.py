@@ -7,7 +7,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-development-key-change-in-
 
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,192.168.1.4').split(',')
+ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1')
+ALLOWED_HOSTS = [h.strip() for h in ALLOWED_HOSTS_ENV.split(',') if h.strip()]
 
 
 INSTALLED_APPS = [
@@ -75,16 +76,16 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CSRF Settings
-CSRF_TRUSTED_ORIGINS = [
-    'https://site.sumconnectia.tech',
-    'http://site.sumconnectia.tech',
-    'https://www.sumconnectia.tech',
-    'http://www.sumconnectia.tech',
-    'http://69.62.89.102:5556',
-    'http://localhost:5556',
-    'http://127.0.0.1:5556',
-]
+# CSRF / Trusted Origins — configure via env var CSRF_TRUSTED_ORIGINS
+# Example: CSRF_TRUSTED_ORIGINS=https://meusite.com,https://www.meusite.com
+_csrf_env = os.getenv(
+    'CSRF_TRUSTED_ORIGINS',
+    'https://site.sumconnectia.tech,https://www.sumconnectia.tech'
+)
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_env.split(',') if o.strip()]
+
+# Trust EasyPanel's reverse proxy (passes X-Forwarded-Proto: https)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Se estiver usando HTTPS (recomendado para produção)
 CSRF_COOKIE_SECURE = False  # Mude para True se usar HTTPS

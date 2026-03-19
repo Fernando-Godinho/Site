@@ -1,22 +1,58 @@
-<section class="py-12" x-data="slideInLeft">
-  <div class="container mx-auto lg:container">
-    <div class="grid grid-cols-1 gap-8 items-center">
-      <div>
-        <h2 class="text-2xl font-semibold">O problema não é falta de pessoas. É excesso de processos manuais.</h2>
-        <div class="grid grid-cols-1 gap-6 mt-6">
-          <div class="card p-6" x-data="fadeIn">
-            <h4 class="font-semibold">Custos administrativos inflados</h4>
-            <p class="text-sm text-slate-600 mt-2">Desperdício com atividades que não agregam valor.</p>
-          </div>
-          <div class="card p-6" x-data="fadeIn">
-            <h4 class="font-semibold">Decisões lentas</h4>
-            <p class="text-sm text-slate-600 mt-2">Falta de indicadores e integração atrasa decisões críticas.</p>
-          </div>
-          <div class="card p-6" x-data="fadeIn">
-            <h4 class="font-semibold">Pessoas presas a tarefas repetitivas</h4>
-            <p class="text-sm text-slate-600 mt-2">Talento sendo usado para trabalho operacional.</p>
-          </div>
+<section style="padding:6rem 0;background:var(--sc-dark);" id="problemas">
+  <div class="sc-container">
+    <div style="text-align:center;margin-bottom:4rem;" class="anim-fade">
+      <div class="sc-badge" style="margin:0 auto 1rem;">O Diagnóstico</div>
+      <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;max-width:600px;margin:0 auto;">
+        O problema não é falta de pessoas.<br>
+        <span class="gradient-text">É excesso de processos manuais.</span>
+      </h2>
+      <p style="margin-top:1rem;color:rgba(148,163,184,0.8);font-size:1rem;max-width:500px;margin-left:auto;margin-right:auto;">
+        Enquanto seu time apaga incêndios, os gargalos silenciosos drenam lucro e energia todos os dias.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="problem-grid">
+
+      <!-- Card 1 -->
+      <div class="glass-card anim-fade" style="padding:2rem;transition-delay:0.05s;">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(239,68,68,0.05));
+                    border:1px solid rgba(239,68,68,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v6m0 4v.01M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
         </div>
+        <h4 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:#f1f5f9;margin-bottom:0.75rem;">Custos administrativos inflados</h4>
+        <p style="font-size:0.9rem;color:rgba(148,163,184,0.8);line-height:1.65;">
+          Horas de trabalho desperdiçadas em tarefas repetitivas que não geram valor algum para o negócio. Seu time vale mais do que isso.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-card anim-fade" style="padding:2rem;transition-delay:0.15s;">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(245,158,11,0.05));
+                    border:1px solid rgba(245,158,11,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h4 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:#f1f5f9;margin-bottom:0.75rem;">Decisões lentas e cegas</h4>
+        <p style="font-size:0.9rem;color:rgba(148,163,184,0.8);line-height:1.65;">
+          Sem indicadores integrados e dados em tempo real, cada decisão estratégica vira um chute. Sua empresa merece navegar com visibilidade.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-card anim-fade" style="padding:2rem;transition-delay:0.25s;">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(99,102,241,0.05));
+                    border:1px solid rgba(99,102,241,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h4 style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:#f1f5f9;margin-bottom:0.75rem;">Talento preso ao operacional</h4>
+        <p style="font-size:0.9rem;color:rgba(148,163,184,0.8);line-height:1.65;">
+          Profissionais capacitados presos a lançamentos manuais, planilhas e relatórios. Automatize o repetitivo e libere o estratégico.
+        </p>
       </div>
     </div>
   </div>
