@@ -5,10 +5,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-development-key-change-in-production')
 
-DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1')
+ALLOWED_HOSTS_ENV = os.getenv(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1,sumconnectia.com,www.sumconnectia.com,site.sumconnectia.tech,www.site.sumconnectia.tech'
+)
 ALLOWED_HOSTS = [h.strip() for h in ALLOWED_HOSTS_ENV.split(',') if h.strip()]
+
 
 
 INSTALLED_APPS = [
@@ -80,7 +84,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Example: CSRF_TRUSTED_ORIGINS=https://meusite.com,https://www.meusite.com
 _csrf_env = os.getenv(
     'CSRF_TRUSTED_ORIGINS',
-    'https://site.sumconnectia.tech,https://www.sumconnectia.tech'
+    'https://sumconnectia.com,https://www.sumconnectia.com,https://site.sumconnectia.tech,https://www.sumconnectia.tech'
 )
 CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_env.split(',') if o.strip()]
 
