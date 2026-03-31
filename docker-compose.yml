@@ -3,6 +3,12 @@ version: '3.8'
 services:
   app:
     image: python:3.13-slim
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sumconnect.rule=Host(sumconnectia.com)"
+      - "traefik.http.routers.sumconnect.entrypoints=https"
+      - "traefik.http.routers.sumconnect.tls=true"
+      - "traefik.http.services.sumconnect.loadbalancer.server.port=5556"
     environment:
       SECRET_KEY: ${SECRET_KEY:-django-insecure-production-change-me-12345}
       DEBUG: "False"
