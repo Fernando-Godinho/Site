@@ -46,7 +46,7 @@ def contact(request):
         
         # Enviar para webhook n8n
         try:
-            webhook_url = 'https://n8n.sumconnectia.tech/webhook/novoLead'
+            webhook_url = 'https://n8n.sumconnectia.com/webhook/novoLead'
             response = requests.post(webhook_url, json=data, timeout=10)
             print(f"✅ Webhook enviado com sucesso! Status: {response.status_code}")
             print(f"Resposta: {response.text}")
