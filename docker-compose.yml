@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   app:
     image: python:3.13-slim
     labels:
@@ -21,7 +22,7 @@ services:
       - app_media:/workspace/sumconnect/media
       - app_static:/workspace/sumconnect/staticfiles
       - db_data:/workspace/sumconnect
-    
+
     command: >
       sh -c "
         apt-get update -qq &&
@@ -51,7 +52,7 @@ services:
       "
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5556/"]
+      test: [ "CMD", "curl", "-f", "http://localhost:5556/" ]
       interval: 30s
       timeout: 10s
       retries: 3
