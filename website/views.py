@@ -29,6 +29,22 @@ def why(request):
     return render(request, 'website/why.html')
 
 
+def service_whatsapp(request):
+    return render(request, 'website/services/automacao_whatsapp.html')
+
+
+def service_integration(request):
+    return render(request, 'website/services/integracao_sistemas.html')
+
+
+def service_ia(request):
+    return render(request, 'website/services/automacao_ia.html')
+
+
+def service_power_bi(request):
+    return render(request, 'website/services/power_bi_automatizado.html')
+
+
 def contact(request):
     if request.method == 'POST':
         # Coletar dados do formulário

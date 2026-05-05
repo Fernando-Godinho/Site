@@ -1,0 +1,67 @@
+{% extends 'website/base.html' %}
+
+{% block meta_title %}Automação WhatsApp para Empresas | Chatbots com IA | Sum Connect{% endblock %}
+{% block meta_description %}Transforme seu WhatsApp em uma máquina de vendas e suporte. Chatbots inteligentes com integração n8n e IA para escalar seu atendimento B2B.{% endblock %}
+
+{% block content %}
+<section style="padding: 6rem 0; background: var(--sc-dark); position: relative; overflow: hidden;">
+    <div class="sc-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;" class="hero-grid-2col">
+            <div class="anim-fade">
+                <div class="sc-badge" style="margin-bottom: 1.5rem;">WhatsApp Inteligente</div>
+                <h1 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 4.5vw, 3.5rem); line-height: 1.1; color: #fff; margin-bottom: 1.25rem;">
+                    Automação de <span class="gradient-text">WhatsApp para Empresas</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: rgba(148, 163, 184, 0.9); line-height: 1.75; margin-bottom: 2rem;">
+                    Não perca mais leads por demora no atendimento. Criamos fluxos inteligentes que qualificam, respondem e agendam reuniões automaticamente, 24/7.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="/contato/" class="btn-primary btn-primary-glow">Agendar Diagnóstico Gratuito</a>
+                </div>
+            </div>
+            <div class="anim-fade" style="text-align: center;">
+                <!-- Espaço para um visual ou animação Lottie -->
+                <div style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: 20px; padding: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Integrações Disponíveis</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <span class="sc-badge">n8n</span>
+                        <span class="sc-badge">Make</span>
+                        <span class="sc-badge">RD Station</span>
+                        <span class="sc-badge">Hubspot</span>
+                        <span class="sc-badge">IA Generativa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 5rem 0; background: var(--sc-surface);">
+    <div class="sc-container">
+        <h2 style="text-align: center; color: #fff; margin-bottom: 3rem;">Por que automatizar seu WhatsApp?</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Atendimento 24/7</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Sua empresa nunca para. Respostas instantâneas mesmo fora do horário comercial.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Qualificação de Leads</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Filtre os curiosos e entregue apenas os leads quentes para seu time de vendas.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Redução de Custos</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Diminua a carga de trabalho manual e escale sem aumentar a equipe de suporte.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'website/components/solution_section.html' %}
+
+<section style="padding: 6rem 0; background: var(--sc-dark); text-align: center;">
+    <div class="sc-container">
+        <h2 style="color: #fff; margin-bottom: 1.5rem;">Pronto para transformar seu atendimento?</h2>
+        <a href="/contato/" class="btn-primary btn-primary-glow">Solicitar Proposta Customizada</a>
+    </div>
+</section>
+{% endblock %}

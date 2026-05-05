@@ -9,6 +9,10 @@ urlpatterns = [
     path('como-trabalhamos/', views.process_view, name='process'),
     path('porque-sum-connect/', views.why, name='why'),
     path('contato/', views.contact, name='contact'),
+    path('automacao-whatsapp/', views.service_whatsapp, name='service_whatsapp'),
+    path('integracao-sistemas/', views.service_integration, name='service_integration'),
+    path('automacao-ia/', views.service_ia, name='service_ia'),
+    path('power-bi-automatizado/', views.service_power_bi, name='service_power_bi'),
     path('blog/', views.blog_list, name='blog_list'),
     path('blog/<slug:slug>/', views.blog_post, name='blog_post'),
 ]

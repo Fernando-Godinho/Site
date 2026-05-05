@@ -1,0 +1,68 @@
+{% extends 'website/base.html' %}
+
+{% block meta_title %}Integração de Sistemas e APIs | Consultoria n8n e Make | Sum Connect{% endblock %}
+{% block meta_description %}Conecte seu CRM, ERP e ferramentas de marketing. Eliminamos o trabalho manual através de integrações inteligentes e seguras via API, Webhooks e n8n.{% endblock %}
+
+{% block content %}
+<section style="padding: 6rem 0; background: var(--sc-dark); position: relative; overflow: hidden;">
+    <div class="sc-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;" class="hero-grid-2col">
+            <div class="anim-fade">
+                <div class="sc-badge" style="margin-bottom: 1.5rem;">Ecossistema Conectado</div>
+                <h1 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 4.5vw, 3.5rem); line-height: 1.1; color: #fff; margin-bottom: 1.25rem;">
+                    Integração de <span class="gradient-text">Sistemas e Fluxos</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: rgba(148, 163, 184, 0.9); line-height: 1.75; margin-bottom: 2rem;">
+                    Pare de copiar e colar dados entre plataformas. Conectamos suas ferramentas favoritas para que a informação flua automaticamente por toda a empresa.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="/contato/" class="btn-primary btn-primary-glow">Agendar Diagnóstico Gratuito</a>
+                </div>
+            </div>
+            <div class="anim-fade" style="text-align: center;">
+                <div style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 20px; padding: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Expertise Técnica</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <span class="sc-badge">APIs REST</span>
+                        <span class="sc-badge">Webhooks</span>
+                        <span class="sc-badge">SQL / NoSQL</span>
+                        <span class="sc-badge">Python</span>
+                        <span class="sc-badge">Cloud Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 5rem 0; background: var(--sc-surface);">
+    <div class="sc-container">
+        <h2 style="text-align: center; color: #fff; margin-bottom: 3rem;">O que integramos?</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">CRM ↔ ERP</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Sincronize vendas com faturamento automaticamente. Evite erros de digitação e atrasos.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Marketing ↔ Vendas</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Leads do Instagram ou site direto para o seu CRM com notificação instantânea para o vendedor.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Financeiro ↔ Dashboards</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Dados bancários e de cartões alimentando seu fluxo de caixa em tempo real.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Suporte ↔ Gestão</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Tickets do Zendesk ou Trello integrados à visão geral do projeto.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 6rem 0; background: var(--sc-dark); text-align: center;">
+    <div class="sc-container">
+        <h2 style="color: #fff; margin-bottom: 1.5rem;">Sistemas integrados geram lucro.</h2>
+        <a href="/contato/" class="btn-primary btn-primary-glow">Conectar Meus Sistemas Agora</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'website/base.html' %}
+
+{% block meta_title %}Automação com IA para Processos B2B | Consultoria de IA | Sum Connect{% endblock %}
+{% block meta_description %}Implemente Inteligência Artificial Generativa nos seus processos administrativos. Análise de documentos, triagem de e-mails e suporte automatizado com GPT-4 e Claude.{% endblock %}
+
+{% block content %}
+<section style="padding: 6rem 0; background: var(--sc-dark); position: relative; overflow: hidden;">
+    <div class="sc-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;" class="hero-grid-2col">
+            <div class="anim-fade">
+                <div class="sc-badge" style="margin-bottom: 1.5rem;">Inteligência Artificial</div>
+                <h1 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 4.5vw, 3.5rem); line-height: 1.1; color: #fff; margin-bottom: 1.25rem;">
+                    Automação <span class="gradient-text">Impulsionada por IA</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: rgba(148, 163, 184, 0.9); line-height: 1.75; margin-bottom: 2rem;">
+                    Vá além das regras simples. Implementamos IA que entende o contexto, analisa documentos complexos e toma decisões baseadas em dados, como um humano faria.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="/contato/" class="btn-primary btn-primary-glow">Agendar Diagnóstico Gratuito</a>
+                </div>
+            </div>
+            <div class="anim-fade" style="text-align: center;">
+                <div style="background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.2); border-radius: 20px; padding: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Modelos de IA</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <span class="sc-badge">OpenAI GPT-4</span>
+                        <span class="sc-badge">Anthropic Claude</span>
+                        <span class="sc-badge">Google Gemini</span>
+                        <span class="sc-badge">Llama 3</span>
+                        <span class="sc-badge">Mistral</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 5rem 0; background: var(--sc-surface);">
+    <div class="sc-container">
+        <h2 style="text-align: center; color: #fff; margin-bottom: 3rem;">Aplicações Práticas de IA</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Análise de Documentos</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Extraia dados de notas fiscais, contratos e PDFs em segundos, sem erro humano.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Triagem de E-mails</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">IA que lê seus e-mails recebidos, classifica a urgência e já prepara o rascunho da resposta.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Suporte Cognitivo</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Chatbots que realmente ajudam o cliente, baseados na base de conhecimento da sua empresa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 6rem 0; background: var(--sc-dark); text-align: center;">
+    <div class="sc-container">
+        <h2 style="color: #fff; margin-bottom: 1.5rem;">Sua empresa na era da IA.</h2>
+        <a href="/contato/" class="btn-primary btn-primary-glow">Transformar Minha Operação com IA</a>
+    </div>
+</section>
+{% endblock %}

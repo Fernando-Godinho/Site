@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sum Connect — Automação Inteligente para Empresas</title>
-  <meta name="description" content="Automatizamos processos administrativos para reduzir custos, liberar o time e acelerar decisões — sem aumentar a equipe.">
+  <title>{% block meta_title %}Sum Connect — Automação Inteligente para Empresas{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Automatizamos processos administrativos para reduzir custos, liberar o time e acelerar decisões — sem aumentar a equipe.{% endblock %}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -310,7 +310,7 @@
         <a href="/sobre/"          style="font-family:Outfit,sans-serif;font-size:0.9rem;font-weight:500;color:rgba(226,232,240,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(226,232,240,0.8)'">Sobre</a>
         <a href="/solucoes/"       style="font-family:Outfit,sans-serif;font-size:0.9rem;font-weight:500;color:rgba(226,232,240,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(226,232,240,0.8)'">Soluções</a>
         <a href="/como-trabalhamos/" style="font-family:Outfit,sans-serif;font-size:0.9rem;font-weight:500;color:rgba(226,232,240,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(226,232,240,0.8)'">Como trabalhamos</a>
-        <a href="/contato/" class="btn-primary btn-primary-glow" style="padding:0.55rem 1.4rem;font-size:0.88rem;">Diagnóstico Gratuito</a>
+        <a href="/contato/" class="btn-primary btn-primary-glow" style="padding:0.55rem 1.4rem;font-size:0.88rem;">Agendar Diagnóstico Gratuito</a>
       </nav>
 
       <!-- Mobile burger -->
@@ -328,7 +328,7 @@
       <a href="/sobre/"            style="font-family:Outfit,sans-serif;font-size:1rem;font-weight:500;color:#e2e8f0;text-decoration:none;">Sobre</a>
       <a href="/solucoes/"         style="font-family:Outfit,sans-serif;font-size:1rem;font-weight:500;color:#e2e8f0;text-decoration:none;">Soluções</a>
       <a href="/como-trabalhamos/" style="font-family:Outfit,sans-serif;font-size:1rem;font-weight:500;color:#e2e8f0;text-decoration:none;">Como trabalhamos</a>
-      <a href="/contato/" class="btn-primary" style="text-align:center;margin-top:0.5rem;">Diagnóstico Gratuito</a>
+      <a href="/contato/" class="btn-primary" style="text-align:center;margin-top:0.5rem;">Agendar Diagnóstico Gratuito</a>
     </div>
   </header>
 
@@ -369,6 +369,12 @@
           <div style="display:flex;flex-direction:column;gap:0.65rem;">
             <a href="/sobre/"            style="font-size:0.88rem;color:rgba(148,163,184,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.8)'">Sobre</a>
             <a href="/solucoes/"         style="font-size:0.88rem;color:rgba(148,163,184,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.8)'">Soluções</a>
+            <div style="display:flex;flex-direction:column;gap:0.4rem;padding-left:0.5rem;border-left:1px solid rgba(255,255,255,0.05);margin:0.25rem 0;">
+              <a href="/automacao-whatsapp/" style="font-size:0.75rem;color:rgba(148,163,184,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.6)'">WhatsApp</a>
+              <a href="/integracao-sistemas/" style="font-size:0.75rem;color:rgba(148,163,184,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.6)'">Integrações</a>
+              <a href="/automacao-ia/"       style="font-size:0.75rem;color:rgba(148,163,184,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.6)'">Inteligência Artificial</a>
+              <a href="/power-bi-automatizado/" style="font-size:0.75rem;color:rgba(148,163,184,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.6)'">Power BI</a>
+            </div>
             <a href="/como-trabalhamos/" style="font-size:0.88rem;color:rgba(148,163,184,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.8)'">Como trabalhamos</a>
             <a href="/contato/"          style="font-size:0.88rem;color:rgba(148,163,184,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.8)'">Contato</a>
           </div>
@@ -379,7 +385,7 @@
           <h4 style="font-family:Outfit,sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(148,163,184,0.6);margin-bottom:1rem;">Contato</h4>
           <div style="display:flex;flex-direction:column;gap:0.65rem;">
             <a href="mailto:contato@sumconnect.com.br" style="font-size:0.88rem;color:rgba(148,163,184,0.8);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='rgba(148,163,184,0.8)'">contato@sumconnect.com.br</a>
-            <a href="/contato/" class="btn-primary" style="padding:0.55rem 1.2rem;font-size:0.82rem;margin-top:0.5rem;text-align:center;">Diagnóstico Gratuito →</a>
+            <a href="/contato/" class="btn-primary" style="padding:0.55rem 1.2rem;font-size:0.82rem;margin-top:0.5rem;text-align:center;">Agendar Diagnóstico Gratuito →</a>
           </div>
         </div>
       </div>

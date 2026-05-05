@@ -1,0 +1,64 @@
+{% extends 'website/base.html' %}
+
+{% block meta_title %}Power BI Automatizado | Dashboards de Gestão em Tempo Real | Sum Connect{% endblock %}
+{% block meta_description %}Pare de perder tempo criando relatórios manuais. Implementamos Power BI automatizado que atualiza sozinho com dados de todas as suas fontes. Decida com clareza.{% endblock %}
+
+{% block content %}
+<section style="padding: 6rem 0; background: var(--sc-dark); position: relative; overflow: hidden;">
+    <div class="sc-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;" class="hero-grid-2col">
+            <div class="anim-fade">
+                <div class="sc-badge" style="margin-bottom: 1.5rem;">Cultura de Dados</div>
+                <h1 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 4.5vw, 3.5rem); line-height: 1.1; color: #fff; margin-bottom: 1.25rem;">
+                    Power BI <span class="gradient-text">100% Automatizado</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: rgba(148, 163, 184, 0.9); line-height: 1.75; margin-bottom: 2rem;">
+                    Abandone as planilhas estáticas. Tenha uma visão 360° do seu negócio em dashboards que se atualizam sozinhos, permitindo decisões rápidas e precisas.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="/contato/" class="btn-primary btn-primary-glow">Agendar Diagnóstico Gratuito</a>
+                </div>
+            </div>
+            <div class="anim-fade" style="text-align: center;">
+                <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 20px; padding: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Visibilidade de Dados</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <span class="sc-badge">Vendas e RFV</span>
+                        <span class="sc-badge">Financeiro</span>
+                        <span class="sc-badge">Operacional</span>
+                        <span class="sc-badge">Logística</span>
+                        <span class="sc-badge">Marketing Digital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 5rem 0; background: var(--sc-surface);">
+    <div class="sc-container">
+        <h2 style="text-align: center; color: #fff; margin-bottom: 3rem;">Por que automatizar seus dashboards?</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Dados em Tempo Real</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Não espere o fim do mês para ver o resultado. Acompanhe a pulsação da empresa minuto a minuto.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Zero Trabalho Manual</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Elimine a necessidade de exportar CSVs e preencher planilhas. A IA e o n8n fazem o trabalho sujo.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+                <h4 style="color: var(--sc-blue); margin-bottom: 1rem;">Decisões Assertivas</h4>
+                <p style="font-size: 0.9rem; color: rgba(148, 163, 184, 0.8);">Com dados confiáveis e centralizados, você reduz o "acho que" e foca no que realmente traz retorno.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 6rem 0; background: var(--sc-dark); text-align: center;">
+    <div class="sc-container">
+        <h2 style="color: #fff; margin-bottom: 1.5rem;">Os dados são o novo petróleo.</h2>
+        <a href="/contato/" class="btn-primary btn-primary-glow">Refinar Meus Dados com Power BI</a>
+    </div>
+</section>
+{% endblock %}
