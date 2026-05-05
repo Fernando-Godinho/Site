@@ -45,6 +45,14 @@ def service_power_bi(request):
     return render(request, 'website/services/power_bi_automatizado.html')
 
 
+def sitemap(request):
+    return render(request, 'website/sitemap.xml', content_type='application/xml')
+
+
+def robots_txt(request):
+    return render(request, 'website/robots.txt', content_type='text/plain')
+
+
 def contact(request):
     if request.method == 'POST':
         # Coletar dados do formulário
